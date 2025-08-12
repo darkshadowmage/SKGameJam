@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://dxvqtprafnsq"]
+
+[ext_resource type="Script" uid="uid://dbmmksaymjeyp" path="res://scenes/zones/hide_area.gd" id="1_ece0x"]
+
+[node name="HideArea" type="Area2D"]
+script = ExtResource("1_ece0x")
+
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

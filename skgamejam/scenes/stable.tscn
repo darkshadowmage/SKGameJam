@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://c7vvb77t6e0u0"]
+
+[ext_resource type="Texture2D" uid="uid://1uivqff615dv" path="res://art/sprites/stable.png" id="1_p5mom"]
+[ext_resource type="PackedScene" uid="uid://dxvqtprafnsq" path="res://scenes/zones/hide_area.tscn" id="2_0lvkw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5t6bo"]
+size = Vector2(517.472, 702.602)
+
+[node name="Stable" type="StaticBody2D"]
+scale = Vector2(1.345, 1.345)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-11.1524, -56.5056, -12.6394, 434.201, 5.20446, 432.714, 3.71747, 605.204, 92.1933, 605.204, 42.3792, 660.223, 287.732, 663.197, 327.881, 599.257, 344.238, 602.231, 341.264, 583.643, 13.3829, 583.643, 8.17844, -46.8401, 170.26, -121.933, 344.238, -40.8922, 342.751, -62.4535, 165.799, -144.981)
+
+[node name="Stable" type="Sprite2D" parent="."]
+position = Vector2(381, 248)
+scale = Vector2(0.784375, 0.785185)
+texture = ExtResource("1_p5mom")
+
+[node name="HideArea" parent="." instance=ExtResource("2_0lvkw")]
+position = Vector2(409, 188)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HideArea"]
+position = Vector2(-223.87, 71.8513)
+shape = SubResource("RectangleShape2D_5t6bo")
+
+[connection signal="body_entered" from="HideArea" to="HideArea" method="_on_body_entered"]
