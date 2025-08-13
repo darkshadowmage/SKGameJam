@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://7yycfrsi7lvl"
-path="res://.godot/imported/strossa.png-776367985641da4132daf2b9ba81a3d6.ctex"
+uid="uid://c73q1mgw8j5dn"
+path="res://.godot/imported/stable.png-0be1d213a2c021f4293beeb3d7e06670.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/sprites/strossa.png"
-dest_files=["res://.godot/imported/strossa.png-776367985641da4132daf2b9ba81a3d6.ctex"]
+source_file="res://art/sprites/background/stable.png"
+dest_files=["res://.godot/imported/stable.png-0be1d213a2c021f4293beeb3d7e06670.ctex"]
 
 [params]
 

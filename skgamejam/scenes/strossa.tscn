@@ -1,14 +1,12 @@
 [gd_scene load_steps=2 format=3 uid="uid://dindn24jxsuym"]
 
-[ext_resource type="Texture2D" uid="uid://7yycfrsi7lvl" path="res://art/sprites/strossa.png" id="1_ywtde"]
+[ext_resource type="Texture2D" uid="uid://bchtqxx3wvai0" path="res://art/sprites/background/strossa.png" id="1_ywtde"]
 
 [node name="Strossa" type="StaticBody2D"]
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-position = Vector2(2.26024, 1.52881)
-scale = Vector2(0.997617, 0.998243)
-polygon = PackedVector2Array(78, 56, 233, -101, 577, 182, 744, 343, 729, 349, 726, 573, 432, 646, 84, 297, 82, 88, 62, 75)
-
-[node name="Strossa" type="Sprite2D" parent="."]
-position = Vector2(291, 300)
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(633, 278)
 texture = ExtResource("1_ywtde")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(729, -99, 729, 528, 730, 541, 719, 550, 719, 736, 171, 737, 170, 538, 161, 537, 159, 328, 154, 324, 154, 309, 150, 302, 149, 228, 154, 224, 154, 210, 160, 206, 160, -103, 368, -205, 429, -224, 508, -212)

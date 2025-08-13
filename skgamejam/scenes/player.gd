@@ -3,7 +3,7 @@ extends CharacterBody2D
 func _process(_delta):
 	
 	var direction = Input.get_vector("Left", "Right", "Up", "Down")
-	velocity = direction * 500
+	velocity = direction * 275
 	move_and_slide()
 	
 	look_at(get_global_mouse_position())
