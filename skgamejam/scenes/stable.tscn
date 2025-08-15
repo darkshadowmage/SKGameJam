@@ -1,16 +1,12 @@
 [gd_scene load_steps=4 format=3 uid="uid://c7vvb77t6e0u0"]
 
 [ext_resource type="Texture2D" uid="uid://c73q1mgw8j5dn" path="res://art/sprites/background/stable.png" id="1_0lvkw"]
+[ext_resource type="Script" uid="uid://622r2dy5qhdh" path="res://scenes/stable.gd" id="1_5t6bo"]
 [ext_resource type="PackedScene" uid="uid://dxvqtprafnsq" path="res://scenes/zones/hide_area.tscn" id="2_0lvkw"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_0lvkw"]
-size = Vector2(510.037, 518.216)
 
 [node name="Stable" type="StaticBody2D"]
 scale = Vector2(1.345, 1.345)
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-polygon = PackedVector2Array(-44.6097, -54.2751, 193.309, -156.877, 295.911, -105.576, 295.167, -52.7881, -11.8959, -50.5576, -9.66543, 401.487, 10.4089, 451.301, 11.8959, 587.361, 375.465, 585.874, 372.491, 471.375, 394.796, 471.375, 399.257, 606.691, -4.46097, 606.691, -2.97398, 460.967, -22.3048, 461.71, -42.3792, 456.506)
+script = ExtResource("1_5t6bo")
 
 [node name="Stable" type="Sprite2D" parent="."]
 position = Vector2(384.387, 246.84)
@@ -20,8 +16,14 @@ texture = ExtResource("1_0lvkw")
 [node name="HideArea" parent="." instance=ExtResource("2_0lvkw")]
 position = Vector2(409, 188)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="HideArea"]
-position = Vector2(-206.026, -6.21559)
-shape = SubResource("RectangleShape2D_0lvkw")
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="HideArea"]
+position = Vector2(2.89588, -2.86989)
+polygon = PackedVector2Array(-214.948, -344.877, -110.115, -294.32, -109.294, -308.55, 35.6877, -252.788, 35.6877, 149.442, 17.8439, 152.416, 20.8178, 272.862, 5.20444, 267.658, 0, 272.862, -26.7658, 272.862, -26.0223, 397.026, -404.461, 397.026, -402.23, 276.58, -449.149, 269.249, -457.327, -245.993)
 
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="."]
+position = Vector2(0.743494, 0)
+polygon = PackedVector2Array(-44.6097, -54.2751, 193.309, -156.877, 295.911, -105.576, 295.167, -52.7881, -9.66543, -51.3011, -2.97398, 458.736, 7.43494, 461.71, 9.66543, 581.413, 388.848, 583.643, 386.617, 441.636, 388.104, 387.361, 396.283, 386.617, 396.283, 402.974, 397.026, 455.762, 397.026, 594.052, -1.48694, 591.078, -2.97398, 460.967, -22.3048, 461.71, -42.3792, 456.506)
+
+[connection signal="body_entered" from="HideArea" to="." method="_on_hide_area_body_entered"]
 [connection signal="body_entered" from="HideArea" to="HideArea" method="_on_body_entered"]
+[connection signal="body_exited" from="HideArea" to="." method="_on_hide_area_body_exited"]
