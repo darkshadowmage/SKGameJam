@@ -73,15 +73,15 @@ grow_vertical = 2
 [node name="BoxContainerA" type="BoxContainer" parent="Gallery" index="0"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.75
-anchor_top = 0.22
+anchor_left = 0.505
 anchor_right = 1.0
-anchor_bottom = 1.0
+anchor_bottom = 0.71
 offset_left = -644.0
 offset_top = -80.0
 grow_horizontal = 0
 grow_vertical = 0
 mouse_filter = 2
+theme_override_constants/separation = 15
 alignment = 1
 
 [node name="TextureRect" type="TextureRect" parent="Gallery/BoxContainerA" index="0"]
@@ -144,34 +144,109 @@ layout_mode = 2
 texture = SubResource("CanvasTexture_2b3hl")
 stretch_mode = 5
 
-[node name="TextureRect11" type="TextureRect" parent="Gallery/BoxContainerA" index="10"]
-custom_minimum_size = Vector2(50, 80)
-layout_mode = 2
-texture = SubResource("CanvasTexture_2b3hl")
-stretch_mode = 5
-
-[node name="TextureRect12" type="TextureRect" parent="Gallery/BoxContainerA" index="11"]
-custom_minimum_size = Vector2(50, 80)
-layout_mode = 2
-texture = SubResource("CanvasTexture_2b3hl")
-stretch_mode = 5
-
-[node name="TextureRect13" type="TextureRect" parent="Gallery/BoxContainerA" index="12"]
-custom_minimum_size = Vector2(50, 80)
-layout_mode = 2
-texture = SubResource("CanvasTexture_2b3hl")
-stretch_mode = 5
-
 [node name="BoxContainerB" type="BoxContainer" parent="Gallery" index="1"]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.686
+anchor_top = 0.12
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -25.0
+offset_right = 25.0
+offset_bottom = 80.0
+grow_horizontal = 2
+theme_override_constants/separation = 15
 
 [node name="TextureRect13" type="TextureRect" parent="Gallery/BoxContainerB" index="0"]
 custom_minimum_size = Vector2(50, 80)
 layout_mode = 2
 texture = SubResource("CanvasTexture_2b3hl")
 stretch_mode = 5
+
+[node name="TextureRect14" type="TextureRect" parent="Gallery/BoxContainerB" index="1"]
+custom_minimum_size = Vector2(50, 80)
+layout_mode = 2
+texture = SubResource("CanvasTexture_2b3hl")
+stretch_mode = 5
+
+[node name="TextureRect15" type="TextureRect" parent="Gallery/BoxContainerB" index="2"]
+custom_minimum_size = Vector2(50, 80)
+layout_mode = 2
+texture = SubResource("CanvasTexture_2b3hl")
+stretch_mode = 5
+
+[node name="TextureRect16" type="TextureRect" parent="Gallery/BoxContainerB" index="3"]
+custom_minimum_size = Vector2(50, 80)
+layout_mode = 2
+texture = SubResource("CanvasTexture_2b3hl")
+stretch_mode = 5
+
+[node name="TextureRect17" type="TextureRect" parent="Gallery/BoxContainerB" index="4"]
+custom_minimum_size = Vector2(50, 80)
+layout_mode = 2
+texture = SubResource("CanvasTexture_2b3hl")
+stretch_mode = 5
+
+[node name="TextureRect18" type="TextureRect" parent="Gallery/BoxContainerB" index="5"]
+custom_minimum_size = Vector2(50, 80)
+layout_mode = 2
+texture = SubResource("CanvasTexture_2b3hl")
+stretch_mode = 5
+
+[node name="TextureRect19" type="TextureRect" parent="Gallery/BoxContainerB" index="6"]
+custom_minimum_size = Vector2(50, 80)
+layout_mode = 2
+texture = SubResource("CanvasTexture_2b3hl")
+stretch_mode = 5
+
+[node name="TextureRect20" type="TextureRect" parent="Gallery/BoxContainerB" index="7"]
+custom_minimum_size = Vector2(50, 80)
+layout_mode = 2
+texture = SubResource("CanvasTexture_2b3hl")
+stretch_mode = 5
+
+[node name="TextureRect21" type="TextureRect" parent="Gallery/BoxContainerB" index="8"]
+custom_minimum_size = Vector2(50, 80)
+layout_mode = 2
+texture = SubResource("CanvasTexture_2b3hl")
+stretch_mode = 5
+
+[node name="TextureRect22" type="TextureRect" parent="Gallery/BoxContainerB" index="9"]
+custom_minimum_size = Vector2(50, 80)
+layout_mode = 2
+texture = SubResource("CanvasTexture_2b3hl")
+stretch_mode = 5
+
+[node name="TextureRect23" type="TextureRect" parent="Gallery/BoxContainerB" index="10"]
+custom_minimum_size = Vector2(50, 80)
+layout_mode = 2
+texture = SubResource("CanvasTexture_2b3hl")
+stretch_mode = 5
+
+[node name="TextureRect24" type="TextureRect" parent="Gallery/BoxContainerB" index="11"]
+custom_minimum_size = Vector2(50, 80)
+layout_mode = 2
+texture = SubResource("CanvasTexture_2b3hl")
+stretch_mode = 5
+
+[node name="TextureRect25" type="TextureRect" parent="Gallery/BoxContainerB" index="12"]
+custom_minimum_size = Vector2(50, 80)
+layout_mode = 2
+texture = SubResource("CanvasTexture_2b3hl")
+stretch_mode = 5
+
+[node name="DeleteGallery" type="Button" parent="Gallery" index="2"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.905
+anchor_top = 0.74
+anchor_right = 0.915
+anchor_bottom = 0.8
+offset_left = -8.0
+offset_top = -8.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "Delete Gallery"
 
 [node name="Player" parent="." index="2"]
 position = Vector2(99, -53)
@@ -183,4 +258,5 @@ collision_layer = 16
 position = Vector2(1.5, -61.75)
 shape = SubResource("RectangleShape2D_2b3hl")
 
+[connection signal="pressed" from="Gallery/DeleteGallery" to="." method="_on_delete_gallery_pressed"]
 [connection signal="body_entered" from="ExitArea" to="." method="_on_exit_area_body_entered"]

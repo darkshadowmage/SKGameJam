@@ -2,6 +2,7 @@ extends LevelParent
 
 @onready var slots_a = $Gallery/BoxContainerA.get_children()
 @onready var slots_b = $Gallery/BoxContainerB.get_children()
+
 func _ready():
 	load_saved_canvases()
 
@@ -22,7 +23,7 @@ func load_saved_canvases():
 	for i in range(files.size()):
 		var path = "user://gallery_images/" + files[i]
 		var img = Image.load_from_file(path)
-		img.resize(64,64, Image.Interpolation.INTERPOLATE_BILINEAR)
+		img.resize(32,32, Image.Interpolation.INTERPOLATE_BILINEAR)
 		var tex = ImageTexture.create_from_image(img)
 		if i < slots_a.size():
 			slots_a[i].texture = tex
@@ -32,11 +33,20 @@ func load_saved_canvases():
 			break  # No more slots available
 
 func _numeric_sort(a: String, b: String) -> bool:
-	var numa = int(a.get_basename().get_slice("_", 1))
-	var numb = int(b.get_basename().get_slice("_", 1))
-	return numa < numb
+	var num_a = int(a.get_basename().get_slice("_", 1))
+	var num_b = int(b.get_basename().get_slice("_", 1))
+	return num_a < num_b
 
 func _on_exit_area_body_entered(_body):
 	var tween = create_tween()
 	tween.tween_property($Player, "speed", 0, 0.5)
 	TransitionLayer.change_scene("res://scenes/outside.tscn")
+
+func _on_delete_gallery_pressed() -> void:
+	var gallery_path = "user://gallery_images"
+	var dir = DirAccess.open(gallery_path)
+	if dir == null:
+		return
+		
+	for file_name in dir.get_files():
+		dir.remove(file_name)

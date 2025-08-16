@@ -2,6 +2,7 @@ extends LevelParent
 
 func _ready():
 	print("ok")
+	
 
 func _on_stable_player_entered():
 	var tween = get_tree().create_tween()
