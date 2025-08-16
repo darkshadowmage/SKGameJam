@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=4 uid="uid://dtnfrj36oe2yv"]
+[gd_scene load_steps=20 format=4 uid="uid://dtnfrj36oe2yv"]
 
 [ext_resource type="PackedScene" uid="uid://dosu6exalldqs" path="res://scenes/level.tscn" id="1_p61qw"]
 [ext_resource type="Texture2D" uid="uid://c0wjoc7bdvl33" path="res://art/sprites/background/outside.png" id="2_7r1kg"]
@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://dydnk7c2os45d" path="res://art/objects/tree.png" id="9_nxbbw"]
 [ext_resource type="Script" uid="uid://u17xd8te7r7f" path="res://scenes/hill_entered.gd" id="12_cdqji"]
 [ext_resource type="Script" uid="uid://ddsk5g1ristk5" path="res://scenes/enter_strossa.gd" id="13_x3una"]
+[ext_resource type="PackedScene" uid="uid://duouy1iytgi8j" path="res://scenes/painting_canvas.tscn" id="14_nxbbw"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5tstl"]
 texture = ExtResource("3_bkgx0")
@@ -257,6 +258,7 @@ texture = ExtResource("7_cdqji")
 [node name="Tree" type="StaticBody2D" parent="." index="2"]
 position = Vector2(572, -1411)
 scale = Vector2(2.97, 2.97)
+collision_layer = 2
 
 [node name="Sprite2D" type="Sprite2D" parent="Tree" index="0"]
 texture = ExtResource("8_x3una")
@@ -320,18 +322,23 @@ texture = ExtResource("7_cdqji")
 position = Vector2(1925, 105)
 texture = ExtResource("7_cdqji")
 
-[node name="Player" parent="." index="6"]
+[node name="Painting_Canvas" parent="." index="6" instance=ExtResource("14_nxbbw")]
+position = Vector2(638, -749)
+scale = Vector2(0.5, 0.5)
+
+[node name="Player" parent="." index="7"]
 position = Vector2(1087, -528)
 
-[node name="HillEntered" type="Area2D" parent="." index="7"]
-collision_layer = 2
+[node name="HillEntered" type="Area2D" parent="." index="8"]
+collision_layer = 16
 script = ExtResource("12_cdqji")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HillEntered" index="0"]
 position = Vector2(636.5, -1560)
 shape = SubResource("RectangleShape2D_x3una")
 
-[node name="EnterStrossa" type="Area2D" parent="." index="8"]
+[node name="EnterStrossa" type="Area2D" parent="." index="9"]
+collision_layer = 16
 script = ExtResource("13_x3una")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="EnterStrossa" index="0"]
@@ -341,6 +348,7 @@ shape = SubResource("RectangleShape2D_nxbbw")
 
 [connection signal="player_entered" from="Stable" to="." method="_on_stable_player_entered"]
 [connection signal="player_left" from="Stable" to="." method="_on_stable_player_left"]
+[connection signal="player_in_range" from="Painting_Canvas" to="." method="_on_painting_canvas_player_in_range"]
 [connection signal="body_entered" from="HillEntered" to="HillEntered" method="_on_body_entered"]
 [connection signal="body_exited" from="HillEntered" to="Stable" method="_on_hill_entered_body_exited"]
 [connection signal="body_exited" from="HillEntered" to="HillEntered" method="_on_body_exited"]

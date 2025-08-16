@@ -8,4 +8,4 @@ script = ExtResource("1_w7c3h")
 
 [node name="Player" parent="." instance=ExtResource("2_w8frs")]
 position = Vector2(692, -300)
-collision_mask = 3
+collision_mask = 19
