@@ -106,6 +106,7 @@ func _on_save_pressed():
 func _on_back_pressed():
 	TransitionLayer.change_scene("res://scenes/outside.tscn")
 
+
 func _numeric_sort(a: String, b: String) -> bool:
 	var num_a = int(a.get_basename().get_slice("_", 1))
 	var num_b = int(b.get_basename().get_slice("_", 1))

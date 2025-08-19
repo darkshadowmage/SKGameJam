@@ -9,7 +9,15 @@ func _process(_delta):
 	velocity = direction * speed
 	move_and_slide()
 	
-	#var player_direction = (get_global_mouse_position() - position).normalized()
+	
+	if Input.is_action_just_pressed("Right"):
+		$AnimatedSprite2D.play("walking_right")
+		
+	if Input.is_action_just_pressed("Left"):
+		$AnimatedSprite2D.play("walking_left")
+		
+	if Input.is_anything_pressed() == false:
+		$AnimatedSprite2D.play("idle")
 				
 
 	

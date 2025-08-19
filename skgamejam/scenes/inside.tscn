@@ -1,10 +1,11 @@
-[gd_scene load_steps=9 format=4 uid="uid://bjk07xthxxsvm"]
+[gd_scene load_steps=10 format=4 uid="uid://bjk07xthxxsvm"]
 
 [ext_resource type="PackedScene" uid="uid://dosu6exalldqs" path="res://scenes/level.tscn" id="1_ou6xt"]
 [ext_resource type="Script" uid="uid://bak3o0uoqqt8b" path="res://scenes/inside.gd" id="2_01b43"]
 [ext_resource type="TileSet" uid="uid://bqkp2uv5uv27m" path="res://scenes/outside.tres" id="3_hqivc"]
 [ext_resource type="Texture2D" uid="uid://b1ge84nx1ehrb" path="res://art/objects/bush.png" id="4_2b3hl"]
 [ext_resource type="Texture2D" uid="uid://q4y6k0hpv33" path="res://art/objects/bush2.png" id="5_77v4g"]
+[ext_resource type="Texture2D" uid="uid://04bow2p3tmu6" path="res://art/objects/table2.png" id="6_77v4g"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_2b3hl"]
 
@@ -549,6 +550,7 @@ texture = SubResource("CanvasTexture_77v4g")
 
 [node name="Player" parent="." index="2"]
 position = Vector2(99, -53)
+scale = Vector2(2.5, 2.5)
 
 [node name="ExitArea" type="Area2D" parent="." index="3"]
 collision_layer = 16
@@ -556,5 +558,10 @@ collision_layer = 16
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ExitArea" index="0"]
 position = Vector2(1.5, -61.75)
 shape = SubResource("RectangleShape2D_2b3hl")
+
+[node name="Table2" type="Sprite2D" parent="." index="4"]
+position = Vector2(75, 220)
+scale = Vector2(1.565, 1.565)
+texture = ExtResource("6_77v4g")
 
 [connection signal="body_entered" from="ExitArea" to="." method="_on_exit_area_body_entered"]

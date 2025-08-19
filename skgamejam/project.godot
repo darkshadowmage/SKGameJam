@@ -19,6 +19,10 @@ config/features=PackedStringArray("4.4", "Forward Plus")
 Globals="*res://globals/globals.gd"
 TransitionLayer="*res://globals/transition_layer.tscn"
 
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/AsepriteWizard/plugin.cfg")
+
 [input]
 
 Left={
@@ -59,3 +63,7 @@ BasicAction={
 2d_physics/layer_2="Objects"
 2d_physics/layer_4="Items"
 2d_physics/layer_5="Zones"
+
+[rendering]
+
+textures/canvas_textures/default_texture_filter=0

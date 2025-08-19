@@ -1,0 +1,14 @@
+[remap]
+
+importer="aseprite_wizard.plugin.noop"
+type="PackedDataContainer"
+uid="uid://dm3ogicfcd4mg"
+path="res://.godot/imported/canvas.aseprite-9ee214e9e7286d773caf25855da2b885.res"
+
+[deps]
+
+source_file="res://art/canvas.aseprite"
+dest_files=["res://.godot/imported/canvas.aseprite-9ee214e9e7286d773caf25855da2b885.res"]
+
+[params]
+
