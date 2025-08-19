@@ -151,6 +151,7 @@ scale = Vector2(1.33, 1.33)
 script = ExtResource("1_g2els")
 
 [node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(1.5, 1.5)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_jej6c")
