@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=4 uid="uid://bjk07xthxxsvm"]
+[gd_scene load_steps=11 format=4 uid="uid://bjk07xthxxsvm"]
 
 [ext_resource type="PackedScene" uid="uid://dosu6exalldqs" path="res://scenes/level.tscn" id="1_ou6xt"]
 [ext_resource type="Script" uid="uid://bak3o0uoqqt8b" path="res://scenes/inside.gd" id="2_01b43"]
@@ -12,7 +12,10 @@
 [sub_resource type="CanvasTexture" id="CanvasTexture_77v4g"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2b3hl"]
-size = Vector2(63, 172.5)
+size = Vector2(58.125, 139.438)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_77v4g"]
+size = Vector2(83.75, 86.5)
 
 [node name="Inside" instance=ExtResource("1_ou6xt")]
 script = ExtResource("2_01b43")
@@ -556,7 +559,7 @@ scale = Vector2(2.5, 2.5)
 collision_layer = 16
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ExitArea" index="0"]
-position = Vector2(1.5, -61.75)
+position = Vector2(1.875, -57.5625)
 shape = SubResource("RectangleShape2D_2b3hl")
 
 [node name="Table2" type="Sprite2D" parent="." index="4"]
@@ -564,4 +567,11 @@ position = Vector2(75, 220)
 scale = Vector2(1.565, 1.565)
 texture = ExtResource("6_77v4g")
 
+[node name="Area2D" type="Area2D" parent="." index="5"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" index="0"]
+position = Vector2(430.125, -326)
+shape = SubResource("RectangleShape2D_77v4g")
+
 [connection signal="body_entered" from="ExitArea" to="." method="_on_exit_area_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

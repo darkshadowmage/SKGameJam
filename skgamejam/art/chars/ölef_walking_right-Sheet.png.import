@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c1u41coomgqbj"
-path="res://.godot/imported/ölef_walking_right_Sheet.png-9a2a9035eecd30811d6b9e74160b8fb5.ctex"
+uid="uid://dy2imjo0b0q6c"
+path="res://.godot/imported/ölef_walking_right-Sheet.png-cdf6ce7d5eb2c1b898580012e791c526.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/chars/ölef_walking_right_Sheet.png"
-dest_files=["res://.godot/imported/ölef_walking_right_Sheet.png-9a2a9035eecd30811d6b9e74160b8fb5.ctex"]
+source_file="res://art/chars/ölef_walking_right-Sheet.png"
+dest_files=["res://.godot/imported/ölef_walking_right-Sheet.png-cdf6ce7d5eb2c1b898580012e791c526.ctex"]
 
 [params]
 
