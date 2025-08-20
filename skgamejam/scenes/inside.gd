@@ -9,6 +9,14 @@ var slot_image_paths: Dictionary = {}
 func _ready():
 	load_saved_canvases()
 	big_image_rect.custom_minimum_size = Vector2(512,512)
+	if Globals.next_spawn == "SpawnBedroom":
+		var spawn = $SpawnBedroom
+		if spawn:
+			$Player.global_position = spawn.global_position
+	if Globals.next_spawn == "SpawnOutside":
+		var spawn = $SpawnOutside
+		if spawn:
+			$Player.global_position = spawn.global_position
 	
 func _on_slot_button_pressed(image_path: String):
 	var img = Image.load_from_file(image_path)
@@ -74,12 +82,15 @@ func _unhandled_input(event: InputEvent) -> void:
 
 func _on_exit_area_body_entered(body):
 	if body is Player:
+		Globals.next_spawn = "SpawnStrossa"
+		$Player/AnimatedSprite2D.play("idle")
 		var tween = create_tween()
 		tween.tween_property($Player, "speed", 0, 0.5)
 		TransitionLayer.change_scene("res://scenes/outside.tscn")
 
 func _on_area_2d_body_exited(body):
 	if body is Player:
+		$Player/AnimatedSprite2D.play("idle")
 		var tween = create_tween()
 		tween.tween_property($Player, "speed", 0, 0.5)
 		TransitionLayer.change_scene("res://scenes/bedroom.tscn")

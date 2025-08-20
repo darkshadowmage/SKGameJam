@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://br0maqkd8t5it"
-path="res://.godot/imported/toilet.png-3b7ea49cf64cbe18612e74a317ab9fe3.ctex"
+uid="uid://ds5dwv0kir410"
+path="res://.godot/imported/bench-export.png-0174390e539636eaa0313a30abb24af0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/objects/toilet.png"
-dest_files=["res://.godot/imported/toilet.png-3b7ea49cf64cbe18612e74a317ab9fe3.ctex"]
+source_file="res://art/objects/bench-export.png"
+dest_files=["res://.godot/imported/bench-export.png-0174390e539636eaa0313a30abb24af0.ctex"]
 
 [params]
 

@@ -1,0 +1,133 @@
+[gd_scene load_steps=5 format=3 uid="uid://b5ncim4rxbao5"]
+
+[ext_resource type="Script" uid="uid://b1ftdqhjjdxjs" path="res://control.gd" id="1_mhnvy"]
+[ext_resource type="Texture2D" uid="uid://c0wjoc7bdvl33" path="res://art/sprites/background/outside.png" id="2_4ytvr"]
+[ext_resource type="Texture2D" uid="uid://xt4pkys1bjm3" path="res://art/objects/tree2.png" id="3_g3eks"]
+[ext_resource type="Texture2D" uid="uid://dydnk7c2os45d" path="res://art/objects/tree.png" id="4_v86rl"]
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_mhnvy")
+
+[node name="Sprites" type="Node2D" parent="."]
+
+[node name="Background" type="Sprite2D" parent="Sprites"]
+texture_filter = 1
+position = Vector2(610, 405)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("2_4ytvr")
+
+[node name="Tree15" type="Sprite2D" parent="Sprites"]
+position = Vector2(922, 405)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("3_g3eks")
+
+[node name="Tree16" type="Sprite2D" parent="Sprites"]
+position = Vector2(828, 453)
+scale = Vector2(0.987, 1.005)
+texture = ExtResource("3_g3eks")
+
+[node name="Tree17" type="Sprite2D" parent="Sprites"]
+position = Vector2(242, 417)
+scale = Vector2(0.987, 1.005)
+texture = ExtResource("3_g3eks")
+
+[node name="Tree8" type="Sprite2D" parent="Sprites"]
+position = Vector2(468, 131)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("3_g3eks")
+
+[node name="Tree18" type="Sprite2D" parent="Sprites"]
+position = Vector2(1035, 325)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("3_g3eks")
+
+[node name="Tree19" type="Sprite2D" parent="Sprites"]
+position = Vector2(138, 361)
+scale = Vector2(0.987, 1.005)
+texture = ExtResource("3_g3eks")
+
+[node name="Tree20" type="Sprite2D" parent="Sprites"]
+position = Vector2(212, 305)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("3_g3eks")
+
+[node name="Tree9" type="Sprite2D" parent="Sprites"]
+position = Vector2(1064, 458)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("3_g3eks")
+
+[node name="Tree10" type="Sprite2D" parent="Sprites"]
+position = Vector2(778.5, 180.5)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_g3eks")
+
+[node name="Tree11" type="Sprite2D" parent="Sprites"]
+position = Vector2(887.5, 209.5)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_g3eks")
+
+[node name="Tree12" type="Sprite2D" parent="Sprites"]
+position = Vector2(1017, 211)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("3_g3eks")
+
+[node name="Tree13" type="Sprite2D" parent="Sprites"]
+position = Vector2(332, 189)
+scale = Vector2(0.56, 0.56)
+texture = ExtResource("4_v86rl")
+
+[node name="Tree21" type="Sprite2D" parent="Sprites"]
+position = Vector2(205, 234)
+scale = Vector2(0.49, 0.49)
+texture = ExtResource("3_g3eks")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+modulate = Color(0.819608, 0.819608, 0.819608, 1)
+texture_filter = 1
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -21.0
+offset_top = -33.0
+offset_right = 21.0
+offset_bottom = 33.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Play" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Play"
+
+[node name="Exit" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Quit"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.869
+anchor_right = 1.0
+anchor_bottom = 0.97
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/normal_font_size = 20
+text = "Made by Benjamin Samyi 
+Music by Dennis Freiberger"
+autowrap_mode = 0
+horizontal_alignment = 1
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Exit" to="." method="_on_exit_pressed"]

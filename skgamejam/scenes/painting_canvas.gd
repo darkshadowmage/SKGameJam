@@ -18,4 +18,5 @@ func _on_area_2d_body_exited(body):
 		
 func _process(_delta: float):
 	if player_close and Input.is_action_just_pressed("BasicAction"):
+		Globals.next_spawn = "SpawnCanvas"
 		TransitionLayer.change_scene("res://scenes/canvas.tscn")

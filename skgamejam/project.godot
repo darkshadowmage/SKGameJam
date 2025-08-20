@@ -11,13 +11,14 @@ config_version=5
 [application]
 
 config/name="SKGameJam"
-run/main_scene="uid://dtnfrj36oe2yv"
+run/main_scene="uid://b5ncim4rxbao5"
 config/features=PackedStringArray("4.4", "Forward Plus")
 
 [autoload]
 
 Globals="*res://globals/globals.gd"
 TransitionLayer="*res://globals/transition_layer.tscn"
+MusicController="*res://globals/music_controller.tscn"
 
 [editor_plugins]
 

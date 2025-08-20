@@ -5,3 +5,9 @@
 
 [node name="DialogueBigPete" instance=ExtResource("1_5bn4s")]
 script = ExtResource("2_n36dg")
+
+[node name="Name" parent="NinePatchRect" index="0"]
+theme_override_font_sizes/bold_italics_font_size = 20
+
+[node name="Text" parent="NinePatchRect" index="1"]
+theme_override_font_sizes/normal_font_size = 15

@@ -1,7 +1,15 @@
 extends LevelParent
 
 func _ready():
-	print("ok")
+	
+	if Globals.next_spawn == "SpawnStrossa":
+		var spawn = $SpawnStrossa
+		if spawn:
+			$Player.global_position = spawn.global_position
+	if Globals.next_spawn == "SpawnCanvas":
+		var spawn = $SpawnCanvas
+		if spawn:
+			$Player.global_position = spawn.global_position
 
 func _on_stable_player_entered():
 	var tween = get_tree().create_tween()
@@ -24,6 +32,8 @@ func _on_hill_entered_player_left_hill():
 	tween_offset.tween_property($Player/Camera2D, "offset", Vector2(0,0), 2)
 
 func _on_enter_strossa_player_entered_strossa():
+	Globals.next_spawn = "SpawnOutside"
+	$Player/AnimatedSprite2D.play("idle")
 	var tween = create_tween()
 	tween.tween_property($Player, "speed", 0, 0.5)
 	TransitionLayer.change_scene("res://scenes/inside.tscn")

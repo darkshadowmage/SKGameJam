@@ -13,7 +13,6 @@
 [ext_resource type="Texture2D" uid="uid://bb2774u20xp5r" path="res://art/chars/Spritesheets/ritter_jamie_standing-Sheet.png" id="8_ul6jp"]
 [ext_resource type="PackedScene" uid="uid://b7m82i6wokd0u" path="res://dialogue/dialogue.tscn" id="9_n0a6u"]
 [ext_resource type="Script" uid="uid://bnhlfavvk58r7" path="res://scenes/simon_char.gd" id="9_vrkev"]
-[ext_resource type="Texture2D" uid="uid://br0maqkd8t5it" path="res://art/objects/toilet.png" id="9_xfjx7"]
 [ext_resource type="Texture2D" uid="uid://dhrtoas26ll4w" path="res://art/objects/table.png" id="10_333nj"]
 [ext_resource type="PackedScene" uid="uid://cw8nshdljtev1" path="res://dialogue/dialogue_simon.tscn" id="11_6b8hr"]
 [ext_resource type="Script" uid="uid://bm2uoqp8t1e0e" path="res://scenes/jamie_char.gd" id="11_vrkev"]
@@ -151,6 +150,9 @@ height = 100.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ul6jp"]
 size = Vector2(141, 177)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_7il7j"]
+load_path = "res://.godot/imported/toilet.png-3b7ea49cf64cbe18612e74a317ab9fe3.ctex"
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2b3hl"]
 size = Vector2(58.125, 139.438)
@@ -787,7 +789,7 @@ mouse_filter = 2
 [node name="Toilet" type="Sprite2D" parent="Sprites" index="3"]
 position = Vector2(291, -471)
 scale = Vector2(0.25, 0.25)
-texture = ExtResource("9_xfjx7")
+texture = SubResource("CompressedTexture2D_7il7j")
 
 [node name="Table" type="Sprite2D" parent="Sprites" index="4"]
 position = Vector2(409, 195)
@@ -800,7 +802,7 @@ scale = Vector2(2, 1.838)
 texture = ExtResource("6_77v4g")
 
 [node name="Player" parent="." index="3"]
-position = Vector2(76, -61)
+position = Vector2(441, -56)
 scale = Vector2(2.5, 2.5)
 
 [node name="ExitArea" type="Area2D" parent="." index="4"]
@@ -815,6 +817,12 @@ shape = SubResource("RectangleShape2D_2b3hl")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" index="0"]
 position = Vector2(430.125, -326)
 shape = SubResource("RectangleShape2D_77v4g")
+
+[node name="SpawnBedroom" type="Node2D" parent="." index="6"]
+position = Vector2(433, -209)
+
+[node name="SpawnOutside" type="Node2D" parent="." index="7"]
+position = Vector2(90, -58)
 
 [connection signal="body_entered" from="Sprites/JenniferChar/Area2D" to="Sprites/JenniferChar" method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Sprites/JenniferChar/Area2D" to="Sprites/JenniferChar" method="_on_area_2d_body_exited"]

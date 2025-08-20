@@ -1,7 +1,85 @@
-[gd_scene load_steps=4 format=4 uid="uid://08erw3owfqew"]
+[gd_scene load_steps=23 format=4 uid="uid://08erw3owfqew"]
 
 [ext_resource type="PackedScene" uid="uid://dosu6exalldqs" path="res://scenes/level.tscn" id="1_bx5pa"]
 [ext_resource type="TileSet" uid="uid://bqkp2uv5uv27m" path="res://scenes/outside.tres" id="2_0grwd"]
+[ext_resource type="Texture2D" uid="uid://04bow2p3tmu6" path="res://art/objects/table2.png" id="3_0grwd"]
+[ext_resource type="Texture2D" uid="uid://bme1401falvuy" path="res://art/objects/teppich2.png" id="3_hdjrh"]
+[ext_resource type="Texture2D" uid="uid://b1ge84nx1ehrb" path="res://art/objects/bush.png" id="4_pwtdf"]
+[ext_resource type="Texture2D" uid="uid://ce0wt87o40xbq" path="res://art/chars/Spritesheets/slugma-Sheet.png" id="5_tjgix"]
+[ext_resource type="Texture2D" uid="uid://q4y6k0hpv33" path="res://art/objects/bush2.png" id="6_xunnl"]
+[ext_resource type="Texture2D" uid="uid://dd6p4yi5vuv08" path="res://art/objects/teppich1.png" id="7_lj4hb"]
+[ext_resource type="Texture2D" uid="uid://6ilcb7v85bs4" path="res://art/objects/bed.png" id="8_lv7wv"]
+[ext_resource type="Texture2D" uid="uid://dw3bcxfyow3ep" path="res://art/objects/bed_flipped.png" id="9_k5fq4"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0w1sy"]
+atlas = ExtResource("5_tjgix")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hdjrh"]
+atlas = ExtResource("5_tjgix")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lj4hb"]
+atlas = ExtResource("5_tjgix")
+region = Rect2(256, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lv7wv"]
+atlas = ExtResource("5_tjgix")
+region = Rect2(384, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k5fq4"]
+atlas = ExtResource("5_tjgix")
+region = Rect2(512, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4wfg3"]
+atlas = ExtResource("5_tjgix")
+region = Rect2(640, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mk2nf"]
+atlas = ExtResource("5_tjgix")
+region = Rect2(768, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cixf6"]
+atlas = ExtResource("5_tjgix")
+region = Rect2(896, 0, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bd3ru"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0w1sy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hdjrh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lj4hb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lv7wv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k5fq4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4wfg3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mk2nf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cixf6")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4wfg3"]
+size = Vector2(153.5, 59)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mk2nf"]
+size = Vector2(110, 54)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bx5pa"]
 size = Vector2(98, 103.5)
@@ -17,23 +95,99 @@ tile_map_data = PackedByteArray("AAAMAPr/BwAGAAUAAAANAPv/BwAEAAQAAAALAPv/BwADAAU
 tile_set = ExtResource("2_0grwd")
 
 [node name="TileMapLayer3" type="TileMapLayer" parent="Ground" index="1"]
-tile_map_data = PackedByteArray("AAAMAPv/BwACAAEAAAAMAPz/BwAFAAAAAAAMAP3/BwAFAAEAAAANAPz/BwACAAEAAAANAP3/BwAFAAEAAAAOAPz/BwACAAEAAAAOAP3/BwAFAAEAAAAPAPz/BwACAAEAAAAPAP3/BwAFAAEAAAAQAPz/BwACAAEAAAAMAP7/BwAFAAEAAAANAP7/BwAFAAEAAAAOAP7/BwAFAAEAAAAPAP7/BwAFAAEAAAALAPz/BwACAAEAAAALAP3/BwAFAAEAAAALAP7/BwAFAAEAAAALAP//BwAFAAEAAAAMAP//BwAFAAEAAAANAP//BwAFAAEAAAAOAP//BwAFAAEAAAAPAP//BwAFAAEAAAALAAAABwAFAAEAAAALAAEABwAIAAEAAAAQAAEABwAIAAEAAAANAAEABwAIAAEAAAAMAAEABwAIAAEAAAAOAAEABwAIAAEAAAAPAAEABwAIAAEAAAAQAAAABwAFAAEAAAAMAAAABwAFAAEAAAANAAAABwAFAAEAAAAOAAAABwAFAAEAAAAPAAAABwAFAAEAAAAQAP3/BwAFAAEAAAAQAP7/BwAFAAEAAAAQAP//BwAFAAEAAAAKAP3/BwAFAAEAAAAKAP7/BwAFAAEAAAAKAP//BwAFAAEAAAAJAP//BwAFAAEAAAAJAAAABwAFAAEAAAAJAAEABwAIAAEAAAAKAAEABwAIAAEAAAAKAAAABwAFAAEAAAAIAAAABwAFAAEAAAAHAAAABwAFAAEAAAAIAAEABwAIAAEAAAAHAAEABwAIAAEAAAAGAAEABwAHAAEAAAAGAAAABwAEAAAAAAAGAP//BwAEAAAAAAAGAP7/BwAEAAAAAAAGAP3/BwAEAAAAAAAHAP3/BwAFAAEAAAAIAP3/BwAFAAEAAAAJAP3/BwAFAAEAAAAJAP7/BwAFAAEAAAAIAP//BwAFAAEAAAAIAP7/BwAFAAEAAAAHAP//BwAFAAEAAAAHAP7/BwAFAAEAAAARAP3/BwAFAAEAAAASAP3/BwAFAAEAAAATAP3/BwAFAAEAAAAUAP3/BwAFAAEAAAAVAP3/BwAGAAEAAAAVAP7/BwAGAAEAAAAVAP//BwAGAAEAAAAVAAAABwAGAAEAAAAVAAEABwAAAAIAAAAUAAEABwAIAAEAAAATAAEABwAIAAEAAAASAAEABwAIAAEAAAARAAEABwAIAAEAAAARAAAABwAFAAEAAAARAP//BwAFAAEAAAARAP7/BwAFAAEAAAASAP7/BwAFAAEAAAATAP7/BwAFAAEAAAAUAP7/BwAFAAEAAAAUAP//BwAFAAEAAAAUAAAABwAFAAEAAAATAAAABwAFAAEAAAASAAAABwAFAAEAAAASAP//BwAFAAEAAAATAP//BwAFAAEAAAAKAPz/BwACAAEAAAAJAPz/BwACAAEAAAAIAPz/BwACAAEAAAAHAPz/BwACAAEAAAARAPz/BwACAAEAAAASAPz/BwACAAEAAAATAPz/BwACAAEAAAAUAPz/BwACAAEAAAAVAPz/BwADAAEAAAAGAPz/BwABAAEAAAA=")
+modulate = Color(0.62, 0.62, 0.62, 1)
+tile_map_data = PackedByteArray("AAAMAPv/BwACAAEAAAAMAPz/BwAFAAAAAAAMAP3/BwAFAAEAAAANAPz/BwACAAEAAAANAP3/BwAFAAEAAAAOAPz/BwACAAEAAAAOAP3/BwAFAAEAAAAPAPz/BwACAAEAAAAPAP3/BwAFAAEAAAAQAPz/BwACAAEAAAAMAP7/BwAIAAEAAAANAP7/BwAFAAEAAAAOAP7/BwAFAAEAAAAPAP7/BwAFAAEAAAALAPz/BwACAAEAAAALAP3/BwAFAAEAAAALAP7/BwAFAAEAAAALAP//BwAFAAEAAAAMAP//BwAFAAEAAAANAP//BwAFAAEAAAAOAP//BwAFAAEAAAAPAP//BwAFAAEAAAALAAAABwAFAAEAAAALAAEABwAIAAEAAAAQAAEABwAIAAEAAAANAAEABwAIAAEAAAAMAAEABwAIAAEAAAAOAAEABwAIAAEAAAAPAAEABwAIAAEAAAAQAAAABwAFAAEAAAAMAAAABwAFAAEAAAANAAAABwAFAAEAAAAOAAAABwAFAAEAAAAPAAAABwAFAAEAAAAQAP3/BwAFAAEAAAAQAP7/BwAFAAEAAAAQAP//BwAFAAEAAAAKAPz/BwACAAEAAAAJAPz/BwACAAEAAAAIAPz/BwACAAEAAAAHAPz/BwACAAEAAAARAPz/BwACAAEAAAASAPz/BwACAAEAAAATAPz/BwACAAEAAAAUAPz/BwACAAEAAAAVAPz/BwADAAEAAAAGAPz/BwABAAEAAAAGAP3/BwAFAAEAAAAHAP3/BwAFAAEAAAAIAP3/BwAFAAEAAAAJAP3/BwAFAAEAAAAKAP3/BwAFAAEAAAAGAP7/BwAFAAEAAAAGAP//BwAFAAEAAAAGAAAABwAFAAEAAAAHAP7/BwAFAAEAAAAHAP//BwAFAAEAAAAHAAAABwAFAAEAAAAIAP7/BwAFAAEAAAAIAP//BwAFAAEAAAAIAAAABwAFAAEAAAAJAP7/BwAFAAEAAAAJAP//BwAFAAEAAAAJAAAABwAFAAEAAAAKAP7/BwAFAAEAAAAKAP//BwAFAAEAAAAKAAAABwAFAAEAAAAGAAEABwAIAAEAAAAHAAEABwAIAAEAAAAIAAEABwAIAAEAAAAJAAEABwAIAAEAAAAKAAEABwAIAAEAAAARAAEABwAIAAEAAAASAAEABwAIAAEAAAATAAEABwAIAAEAAAAUAAEABwAIAAEAAAAVAAEABwAIAAEAAAARAP3/BwAFAAEAAAARAP7/BwAFAAEAAAARAP//BwAFAAEAAAARAAAABwAFAAEAAAASAP3/BwAFAAEAAAASAP7/BwAFAAEAAAASAP//BwAFAAEAAAASAAAABwAFAAEAAAATAP3/BwAFAAEAAAATAP7/BwAFAAEAAAATAP//BwAFAAEAAAATAAAABwAFAAEAAAAUAP3/BwAFAAEAAAAUAP7/BwAFAAEAAAAUAP//BwAFAAEAAAAUAAAABwAFAAEAAAAVAP3/BwAFAAEAAAAVAP7/BwAFAAEAAAAVAP//BwAFAAEAAAAVAAAABwAFAAEAAAA=")
 tile_set = ExtResource("2_0grwd")
 
-[node name="TileMapLayer" type="TileMapLayer" parent="Ground" index="2"]
+[node name="TileMapLayer5" type="TileMapLayer" parent="Ground" index="2"]
+tile_map_data = PackedByteArray("AAAMAPv/BwACAAEAAAAMAPz/BwAFAAAAAAAMAP3/BwAFAAEAAAANAPz/BwACAAEAAAANAP3/BwAFAAEAAAAOAPz/BwACAAEAAAAOAP3/BwAFAAEAAAAPAPz/BwACAAEAAAAPAP3/BwAFAAEAAAAQAPz/BwACAAEAAAAMAP7/BwAFAAEAAAANAP7/BwAFAAEAAAAOAP7/BwAFAAEAAAAPAP7/BwAFAAEAAAALAPz/BwACAAEAAAALAP3/BwAFAAEAAAALAP7/BwAFAAEAAAALAP//BwAFAAEAAAAMAP//BwAFAAEAAAANAP//BwAFAAEAAAAOAP//BwAFAAEAAAAPAP//BwAFAAEAAAALAAAABwAFAAEAAAALAAEABwAIAAEAAAAQAAEABwAIAAEAAAANAAEABwAIAAEAAAAMAAEABwAIAAEAAAAOAAEABwAIAAEAAAAPAAEABwAIAAEAAAAQAAAABwAFAAEAAAAMAAAABwAFAAEAAAANAAAABwAFAAEAAAAOAAAABwAFAAEAAAAPAAAABwAFAAEAAAAQAP3/BwAFAAEAAAAQAP7/BwAFAAEAAAAQAP//BwAFAAEAAAAKAPz/BwACAAEAAAAJAPz/BwACAAEAAAAIAPz/BwACAAEAAAAHAPz/BwACAAEAAAARAPz/BwACAAEAAAASAPz/BwACAAEAAAATAPz/BwACAAEAAAAUAPz/BwACAAEAAAAVAPz/BwADAAEAAAAGAPz/BwABAAEAAAA=")
+tile_set = ExtResource("2_0grwd")
+
+[node name="TileMapLayer" type="TileMapLayer" parent="Ground" index="3"]
 tile_map_data = PackedByteArray("AAANAP3/BwAEAAYAAAAOAP3/BwAEAAYAAAAPAP3/BwAEAAYAAAAQAP3/BwAFAAYAAAALAPz/BwABAAYAAAAQAPz/BwAAAAYAAAANAPz/BwACAAYAAAAOAPz/BwACAAYAAAAPAPz/BwACAAYAAAALAP3/BwADAAYAAAAGAP3/BwAEAAYAAAAHAP3/BwAEAAYAAAAJAP3/BwAEAAYAAAAKAP3/BwAEAAYAAAAGAPz/BwACAAYAAAAHAPz/BwACAAYAAAAJAPz/BwACAAYAAAAKAPz/BwACAAYAAAARAPz/BwACAAYAAAARAP3/BwAEAAYAAAASAPz/BwACAAYAAAASAP3/BwAEAAYAAAAUAPz/BwACAAYAAAAUAP3/BwAEAAYAAAAVAPz/BwACAAYAAAAVAP3/BwAEAAYAAAA=")
 tile_set = ExtResource("2_0grwd")
 
-[node name="TileMapLayer2" type="TileMapLayer" parent="Ground" index="3"]
+[node name="TileMapLayer2" type="TileMapLayer" parent="Ground" index="4"]
 position = Vector2(-1, -1)
 tile_map_data = PackedByteArray("AAALAPz/BwADAAQAAAAQAPz/BwACAAUAAAANAPz/BwAFAAUAAAAOAPz/BwAFAAUAAAAPAPz/BwAFAAUAAAALAP//BwAEAAQAAAALAP7/BwAEAAQAAAALAP3/BwAEAAQAAAAQAP3/BwADAAUAAAAQAP7/BwADAAUAAAAMAAEABwAGAAUAAAANAAEABwAGAAUAAAAOAAEABwAGAAUAAAAPAAEABwAGAAUAAAALAAAABwAEAAQAAAAQAP//BwADAAUAAAAQAAAABwADAAUAAAALAAEABwABAAIAAAAQAAEABwAEAAUAAAASAPz/BwAGAAUAAAASAAEABwAGAAUAAAATAAEABwAGAAUAAAAUAPz/BwAGAAUAAAAUAAEABwAGAAUAAAAVAAEABwAEAAUAAAAGAP3/BwAEAAQAAAAGAP7/BwAEAAQAAAAGAP//BwAEAAQAAAAGAAAABwAEAAQAAAAGAAEABwABAAIAAAAGAPz/BwACAAQAAAAHAPz/BwAGAAUAAAAHAAEABwAGAAUAAAAIAAEABwAGAAUAAAAJAPz/BwAGAAUAAAAJAAEABwAGAAUAAAAKAPz/BwAGAAUAAAAKAAEABwAGAAUAAAARAAEABwAGAAUAAAARAPz/BwAGAAUAAAAVAPz/BwABAAcAAAAVAP3/BwADAAUAAAAVAP7/BwADAAUAAAAVAP//BwADAAUAAAAVAAAABwADAAUAAAA=")
 tile_set = ExtResource("2_0grwd")
 
-[node name="Player" parent="." index="1"]
-position = Vector2(438, -60)
+[node name="Sprites" type="Node2D" parent="." index="1"]
+
+[node name="Teppich2" type="Sprite2D" parent="Sprites" index="0"]
+modulate = Color(0.58, 0.58, 0.58, 1)
+position = Vector2(956, 60)
+texture = ExtResource("3_hdjrh")
+
+[node name="Bush" type="Sprite2D" parent="Sprites" index="1"]
+modulate = Color(0.72, 0.72, 0.72, 1)
+position = Vector2(120, 160)
+texture = ExtResource("4_pwtdf")
+
+[node name="Bush" type="Sprite2D" parent="Sprites/Bush" index="0"]
+modulate = Color(0.72, 0.72, 0.72, 1)
+position = Vector2(119, 162)
+texture = ExtResource("4_pwtdf")
+
+[node name="Slugma" type="AnimatedSprite2D" parent="Sprites" index="2"]
+modulate = Color(0.67, 0.67, 0.67, 1)
+position = Vector2(65, 174)
+sprite_frames = SubResource("SpriteFrames_bd3ru")
+autoplay = "default"
+
+[node name="Bush2" type="Sprite2D" parent="Sprites" index="3"]
+modulate = Color(0.72, 0.72, 0.72, 1)
+position = Vector2(44, 233)
+texture = ExtResource("6_xunnl")
+
+[node name="Bush2" type="Sprite2D" parent="Sprites/Bush2" index="0"]
+modulate = Color(0.74, 0.74, 0.74, 1)
+position = Vector2(204, -191)
+texture = ExtResource("6_xunnl")
+
+[node name="Teppich1" type="Sprite2D" parent="Sprites" index="4"]
+position = Vector2(453, 161)
+texture = ExtResource("7_lj4hb")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Sprites" index="5"]
+
+[node name="Bed" type="Sprite2D" parent="Sprites/StaticBody2D" index="0"]
+position = Vector2(761, 139)
+scale = Vector2(1.3, 1.3)
+texture = ExtResource("8_lv7wv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprites/StaticBody2D" index="1"]
+position = Vector2(758.75, 183.5)
+shape = SubResource("RectangleShape2D_4wfg3")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="Sprites" index="6"]
+position = Vector2(100, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprites/StaticBody2D3" index="0"]
+position = Vector2(838, 43)
+shape = SubResource("RectangleShape2D_4wfg3")
+
+[node name="Sprite2D" type="Sprite2D" parent="Sprites/StaticBody2D3" index="1"]
+modulate = Color(0.58, 0.58, 0.58, 1)
+position = Vector2(865, 11)
+texture = ExtResource("9_k5fq4")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="Sprites" index="7"]
+
+[node name="Table2" type="Sprite2D" parent="Sprites/StaticBody2D2" index="0"]
+position = Vector2(594, -18)
+scale = Vector2(2.2, 2.2)
+texture = ExtResource("3_0grwd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprites/StaticBody2D2" index="1"]
+position = Vector2(581, -11)
+shape = SubResource("RectangleShape2D_mk2nf")
+
+[node name="Player" parent="." index="2"]
+position = Vector2(595, 165)
 scale = Vector2(2.5, 2.5)
 
-[node name="ExitArea" type="Area2D" parent="." index="2"]
+[node name="ExitArea" type="Area2D" parent="." index="3"]
 collision_layer = 16
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ExitArea" index="0"]

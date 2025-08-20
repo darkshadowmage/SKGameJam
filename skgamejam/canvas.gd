@@ -104,6 +104,7 @@ func _on_save_pressed():
 	var _saver = image.save_png(save_path)
 
 func _on_back_pressed():
+	Globals.next_spawn = "SpawnCanvas"
 	TransitionLayer.change_scene("res://scenes/outside.tscn")
 
 func _numeric_sort(a: String, b: String) -> bool:
