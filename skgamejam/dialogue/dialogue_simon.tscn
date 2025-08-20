@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://cw8nshdljtev1"]
+
+[ext_resource type="PackedScene" uid="uid://b7m82i6wokd0u" path="res://dialogue/dialogue.tscn" id="1_m55v2"]
+
+[node name="Dialogue_Simon" instance=ExtResource("1_m55v2")]
+
+[node name="NinePatchRect" parent="." index="0"]
+modulate = Color(0.335662, 0.63101, 0.470889, 1)
+region_rect = Rect2(98.0918, 51.8892, 186.79, 234.276)
+
+[node name="Name" parent="NinePatchRect" index="0"]
+texture_filter = 1
+pivot_offset = Vector2(25, 0)

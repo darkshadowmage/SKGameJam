@@ -2,11 +2,10 @@ extends LevelParent
 
 func _ready():
 	print("ok")
-	
 
 func _on_stable_player_entered():
 	var tween = get_tree().create_tween()
-	tween.tween_property($Player/Camera2D, "zoom", Vector2(1.2,1.2), 1)
+	tween.tween_property($Player/Camera2D, "zoom", Vector2(1.7,1.7), 1)
 	
 func _on_stable_player_left():
 	var tween = get_tree().create_tween()

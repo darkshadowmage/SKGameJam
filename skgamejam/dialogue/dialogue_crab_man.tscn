@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://bc1jr2ekfxlis"]
+
+[ext_resource type="PackedScene" uid="uid://b7m82i6wokd0u" path="res://dialogue/dialogue.tscn" id="1_fwut7"]
+[ext_resource type="Script" uid="uid://cedn4fr1gyyyt" path="res://dialogue_crab_man.gd" id="2_rdbtg"]
+
+[node name="DialogueCrabMan" instance=ExtResource("1_fwut7")]
+script = ExtResource("2_rdbtg")
+
+[node name="NinePatchRect" parent="." index="0"]
+modulate = Color(0.879383, 0.365819, 0.415085, 1)
+
+[node name="Text" parent="NinePatchRect" index="1"]
+offset_left = 4.0
+offset_top = 27.0
+offset_right = 179.0
+offset_bottom = 81.0

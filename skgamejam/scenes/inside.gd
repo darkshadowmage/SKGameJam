@@ -72,13 +72,14 @@ func _unhandled_input(event: InputEvent) -> void:
 			if not image_popup.get_global_rect().has_point(event.global_position):
 				image_popup.hide()
 
-func _on_exit_area_body_entered(_body):
-	var tween = create_tween()
-	tween.tween_property($Player, "speed", 0, 0.5)
-	TransitionLayer.change_scene("res://scenes/outside.tscn")
+func _on_exit_area_body_entered(body):
+	if body is Player:
+		var tween = create_tween()
+		tween.tween_property($Player, "speed", 0, 0.5)
+		TransitionLayer.change_scene("res://scenes/outside.tscn")
 
-
-func _on_area_2d_body_exited(body: Node2D) -> void:
-	var tween = create_tween()
-	tween.tween_property($Player, "speed", 0, 0.5)
-	TransitionLayer.change_scene("res://scenes/bedroom.tscn")
+func _on_area_2d_body_exited(body):
+	if body is Player:
+		var tween = create_tween()
+		tween.tween_property($Player, "speed", 0, 0.5)
+		TransitionLayer.change_scene("res://scenes/bedroom.tscn")

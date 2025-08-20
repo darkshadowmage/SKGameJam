@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://6uipn40cjtpu"]
+
+[ext_resource type="PackedScene" uid="uid://b7m82i6wokd0u" path="res://dialogue/dialogue.tscn" id="1_wef6k"]
+[ext_resource type="Script" uid="uid://b3iyclm51vpdy" path="res://dialogue_rosie.gd" id="2_d7jvm"]
+
+[node name="DialogueRosie" instance=ExtResource("1_wef6k")]
+script = ExtResource("2_d7jvm")
+
+[node name="NinePatchRect" parent="." index="0"]
+modulate = Color(1, 0.156987, 0.365778, 1)

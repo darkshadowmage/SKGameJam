@@ -1,0 +1,56 @@
+[gd_scene load_steps=3 format=3 uid="uid://dv4gha6gvdelh"]
+
+[ext_resource type="Texture2D" uid="uid://dr30xfdfcoouf" path="res://art/canvas.png" id="1_bhweo"]
+[ext_resource type="Script" uid="uid://vyyr7ne10ylw" path="res://scenes/dialogue_kata.gd" id="1_uj5am"]
+
+[node name="DialogueKata" type="Control"]
+custom_minimum_size = Vector2(200, 100)
+layout_mode = 3
+anchor_left = 0.869
+anchor_top = 0.852
+anchor_right = 1.03
+anchor_bottom = 0.934
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_uj5am")
+
+[node name="NinePatchRectKata" type="NinePatchRect" parent="."]
+modulate = Color(0.67, 0.758, 1, 1)
+texture_filter = 1
+layout_mode = 0
+offset_left = -23.0
+offset_top = 5.0
+offset_right = 149.0
+offset_bottom = 96.0
+texture = ExtResource("1_bhweo")
+region_rect = Rect2(98.9857, 51.323, 185.67, 233.624)
+patch_margin_left = 3
+patch_margin_top = 3
+patch_margin_right = 3
+patch_margin_bottom = 3
+
+[node name="Name" type="RichTextLabel" parent="NinePatchRectKata"]
+modulate = Color(0, 0, 0, 1)
+texture_filter = 1
+layout_mode = 0
+offset_right = 80.0
+offset_bottom = 26.0
+scale = Vector2(0.8, 0.8)
+pivot_offset = Vector2(20, 0)
+mouse_filter = 2
+text = "Name
+"
+
+[node name="Text" type="RichTextLabel" parent="NinePatchRectKata"]
+modulate = Color(0, 0, 0, 1)
+texture_filter = 1
+layout_mode = 0
+offset_left = 8.17603
+offset_top = 33.336
+offset_right = 265.176
+offset_bottom = 117.336
+scale = Vector2(0.6, 0.6)
+text = "Text
+"
+horizontal_alignment = 1
+visible_characters_behavior = 1

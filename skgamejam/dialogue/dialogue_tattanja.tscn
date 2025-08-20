@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://4e8jo76xrd00"]
+
+[ext_resource type="PackedScene" uid="uid://dv4gha6gvdelh" path="res://scenes/dialogue_kata.tscn" id="1_qtytn"]
+[ext_resource type="Script" uid="uid://ngshgo2l4pnb" path="res://dialogue_tattanja.gd" id="2_wlgqc"]
+
+[node name="DialogueTattanja" instance=ExtResource("1_qtytn")]
+script = ExtResource("2_wlgqc")
+
+[node name="Name" parent="NinePatchRectKata" index="0"]
+scale = Vector2(0.7, 0.7)

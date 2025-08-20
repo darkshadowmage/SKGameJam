@@ -1,0 +1,792 @@
+[gd_scene load_steps=38 format=4 uid="uid://bjk07xthxxsvm"]
+
+[ext_resource type="PackedScene" uid="uid://dosu6exalldqs" path="res://scenes/level.tscn" id="1_ou6xt"]
+[ext_resource type="Script" uid="uid://bak3o0uoqqt8b" path="res://scenes/inside.gd" id="2_01b43"]
+[ext_resource type="TileSet" uid="uid://bqkp2uv5uv27m" path="res://scenes/outside.tres" id="3_hqivc"]
+[ext_resource type="Texture2D" uid="uid://b1ge84nx1ehrb" path="res://art/objects/bush.png" id="4_2b3hl"]
+[ext_resource type="Texture2D" uid="uid://q4y6k0hpv33" path="res://art/objects/bush2.png" id="5_77v4g"]
+[ext_resource type="Texture2D" uid="uid://04bow2p3tmu6" path="res://art/objects/table2.png" id="6_77v4g"]
+[ext_resource type="Texture2D" uid="uid://b2gj2lrq4oc6h" path="res://art/chars/Spritesheets/jennifer_standing-Sheet.png" id="6_d3bmk"]
+[ext_resource type="Script" uid="uid://da64k6ahxheed" path="res://scenes/jennifer_char.gd" id="7_333nj"]
+[ext_resource type="Texture2D" uid="uid://baqi5wwems0e1" path="res://art/chars/Spritesheets/simon-Sheet.png" id="7_ukexp"]
+[ext_resource type="Texture2D" uid="uid://bb2774u20xp5r" path="res://art/chars/Spritesheets/ritter_jamie_standing-Sheet.png" id="8_ul6jp"]
+[ext_resource type="PackedScene" uid="uid://b7m82i6wokd0u" path="res://dialogue/dialogue.tscn" id="9_n0a6u"]
+[ext_resource type="Texture2D" uid="uid://br0maqkd8t5it" path="res://art/objects/toilet.png" id="9_xfjx7"]
+[ext_resource type="Texture2D" uid="uid://dhrtoas26ll4w" path="res://art/objects/table.png" id="10_333nj"]
+[ext_resource type="Script" uid="uid://bm2uoqp8t1e0e" path="res://scenes/jamie_char.gd" id="11_vrkev"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_2b3hl"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_77v4g"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_udlaf"]
+atlas = ExtResource("6_d3bmk")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c000n"]
+atlas = ExtResource("6_d3bmk")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4qeqt"]
+atlas = ExtResource("6_d3bmk")
+region = Rect2(256, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ukexp"]
+atlas = ExtResource("6_d3bmk")
+region = Rect2(384, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ul6jp"]
+atlas = ExtResource("6_d3bmk")
+region = Rect2(512, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xfjx7"]
+atlas = ExtResource("6_d3bmk")
+region = Rect2(640, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_333nj"]
+atlas = ExtResource("6_d3bmk")
+region = Rect2(768, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n0a6u"]
+atlas = ExtResource("6_d3bmk")
+region = Rect2(896, 0, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vrkev"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_udlaf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c000n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4qeqt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ukexp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ul6jp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xfjx7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_333nj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n0a6u")
+}],
+"loop": true,
+"name": &"default",
+"speed": 1.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ukexp"]
+radius = 15.0
+height = 100.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ul6jp"]
+size = Vector2(128, 172.5)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vrkev"]
+atlas = ExtResource("7_ukexp")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7il7j"]
+atlas = ExtResource("7_ukexp")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7il7j"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vrkev")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7il7j")
+}],
+"loop": true,
+"name": &"default",
+"speed": 2.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_xfjx7"]
+radius = 14.0
+height = 120.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6b8hr"]
+atlas = ExtResource("8_ul6jp")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4qhti"]
+atlas = ExtResource("8_ul6jp")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_cqkff"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6b8hr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4qhti")
+}],
+"loop": true,
+"name": &"default",
+"speed": 1.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_333nj"]
+radius = 17.0
+height = 100.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2b3hl"]
+size = Vector2(58.125, 139.438)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_77v4g"]
+size = Vector2(83.75, 86.5)
+
+[node name="Inside" instance=ExtResource("1_ou6xt")]
+script = ExtResource("2_01b43")
+
+[node name="Ground" type="Node2D" parent="." index="0"]
+position = Vector2(-762, 231)
+
+[node name="TileMapLayer4" type="TileMapLayer" parent="Ground" index="0"]
+tile_map_data = PackedByteArray("AAAIAPv/BwABAAAAAAAIAPr/BwAEAAEAAAAIAPn/BwAEAAEAAAAIAPj/BwAEAAEAAAAIAPf/BwABAAYAAAAJAPf/BwACAAYAAAAKAPf/BwACAAYAAAALAPf/BwAAAAYAAAAIAPz/BwAEAAAAAAAIAP3/BwAEAAAAAAAIAP7/BwAEAAAAAAAIAP//BwAEAAAAAAAIAAAABwAEAAAAAAAIAAEABwAEAAAAAAAIAAIABwAEAAAAAAAJAAIABwAFAAEAAAAKAAIABwAFAAEAAAALAAIABwAFAAEAAAALAAEABwAFAAEAAAALAP//BwAFAAEAAAALAAAABwAFAAEAAAAKAP7/BwAFAAEAAAALAPj/BwAGAAAAAAALAPr/BwAFAAAAAAAKAPr/BwAFAAAAAAAJAPr/BwAFAAAAAAALAPv/BwAFAAEAAAAMAP7/BwAFAAEAAAANAP7/BwAFAAEAAAAQAAIABwAFAAEAAAAMAAIABwAFAAEAAAAOAAIABwAFAAEAAAANAAIABwAFAAEAAAAPAAIABwAFAAEAAAATAPv/BwADAAAAAAATAPz/BwAGAAEAAAATAP3/BwAGAAEAAAATAP7/BwAFAAEAAAASAP7/BwAFAAEAAAARAP7/BwAFAAEAAAAOAP7/BwAFAAEAAAARAAIABwAFAAEAAAASAAIABwAFAAEAAAATAAIABwAFAAEAAAAVAAIABwAFAAEAAAAUAAIABwAFAAEAAAAWAAIABwAFAAEAAAAZAP//BwAGAAEAAAAZAAAABwAGAAEAAAAZAAEABwAGAAEAAAAZAAIABwAGAAEAAAAYAAIABwAFAAEAAAAXAAIABwAFAAEAAAAJAPj/BwAFAAAAAAAKAPj/BwAFAAAAAAANAPv/BwAFAAEAAAAOAPv/BwACAAAAAAAPAPv/BwACAAAAAAAQAPv/BwACAAAAAAARAPv/BwACAAAAAAASAPv/BwACAAAAAAAYAP//BwAFAAEAAAAXAP//BwAFAAEAAAAWAP//BwAFAAEAAAAVAP//BwAFAAEAAAAUAP//BwAFAAEAAAATAP//BwAFAAEAAAASAP//BwAFAAEAAAARAP//BwAFAAEAAAAOAP//BwAFAAEAAAANAP//BwAFAAEAAAAMAP//BwAFAAEAAAAJAPn/BwAFAAAAAAAKAPn/BwAFAAAAAAALAPz/BwAFAAEAAAAMAPz/BwAFAAEAAAAMAP3/BwAFAAEAAAANAP3/BwAFAAEAAAAOAP3/BwAFAAEAAAAJAPv/BwACAAAAAAAJAPz/BwAFAAEAAAAJAP3/BwAFAAEAAAAKAPv/BwACAAAAAAAKAPz/BwAFAAEAAAAKAP3/BwAFAAEAAAALAP3/BwAFAAEAAAAMAPv/BwAFAAEAAAANAPz/BwAFAAEAAAAOAPz/BwAFAAEAAAAPAPz/BwAFAAEAAAAPAP3/BwAFAAEAAAAQAPz/BwAFAAEAAAAQAP3/BwAFAAEAAAARAPz/BwAFAAEAAAARAP3/BwAFAAEAAAASAPz/BwAFAAEAAAASAP3/BwAFAAEAAAAJAP//BwAFAAEAAAAKAP//BwAFAAEAAAAPAP7/BwAFAAEAAAAQAP7/BwAFAAEAAAAJAAAABwAFAAEAAAAJAAEABwAFAAEAAAAKAAAABwAFAAEAAAAKAAEABwAFAAEAAAAMAAAABwAFAAEAAAAMAAEABwAFAAEAAAANAAAABwAFAAEAAAANAAEABwAFAAEAAAAOAAAABwAFAAEAAAAOAAEABwAFAAEAAAAPAAAABwAFAAEAAAAPAAEABwAFAAEAAAAQAAAABwAFAAEAAAAQAAEABwAFAAEAAAARAAAABwAFAAEAAAARAAEABwAFAAEAAAASAAAABwAFAAEAAAASAAEABwAFAAEAAAATAAAABwAFAAEAAAATAAEABwAFAAEAAAAUAAAABwAFAAEAAAAUAAEABwAFAAEAAAAVAAAABwAFAAEAAAAVAAEABwAFAAEAAAAWAAAABwAFAAEAAAAWAAEABwAFAAEAAAAXAAAABwAFAAEAAAAXAAEABwAFAAEAAAAYAAAABwAFAAEAAAAYAAEABwAFAAEAAAAPAP//BwAFAAEAAAAQAP//BwAFAAEAAAALAP7/BwAFAAEAAAAJAP7/BwAFAAEAAAA=")
+tile_set = ExtResource("3_hqivc")
+
+[node name="TileMapLayer3" type="TileMapLayer" parent="Ground" index="1"]
+tile_map_data = PackedByteArray("AAAIAPv/BwAHAAAAAAAIAPr/BwAEAAEAAAAIAPn/BwAEAAEAAAAIAPj/BwAEAAEAAAAIAPf/BwABAAYAAAAJAPf/BwACAAYAAAAKAPf/BwACAAYAAAALAPf/BwAAAAYAAAAIAPz/BwAEAAAAAAAIAP3/BwAEAAAAAAAIAP7/BwABAAEAAAAIAP//BwAHAAAAAAAIAAAABwAEAAAAAAAIAAEABwAEAAAAAAAIAAIABwAHAAEAAAAJAAIABwAIAAEAAAAKAAIABwAIAAEAAAALAAIABwAIAAEAAAALAAEABwAFAAEAAAALAP//BwAAAAEAAAALAAAABwAFAAEAAAAKAP7/BwACAAEAAAAJAP7/BwACAAEAAAALAPj/BwAGAAAAAAALAPn/BwAGAAAAAAALAPr/BwAFAAAAAAAKAPr/BwAFAAAAAAAJAPr/BwAFAAAAAAALAPv/BwAIAAAAAAAMAP7/BwABAAEAAAANAP7/BwACAAEAAAAQAAIABwACAAEAAAAMAAIABwABAAEAAAAOAAIABwACAAEAAAANAAIABwACAAEAAAAPAAIABwACAAEAAAATAPv/BwAAAAEAAAATAPz/BwAGAAEAAAATAP3/BwAGAAEAAAATAP7/BwACAAEAAAASAP7/BwACAAEAAAARAP7/BwACAAEAAAAOAP7/BwACAAEAAAARAAIABwACAAEAAAASAAIABwACAAEAAAATAAIABwACAAEAAAAVAAIABwACAAEAAAAUAAIABwACAAEAAAAWAAIABwACAAEAAAAZAP//BwAAAAEAAAAZAAAABwAGAAEAAAAZAAEABwAGAAEAAAAZAAIABwADAAEAAAAYAAIABwACAAEAAAAXAAIABwACAAEAAAAJAPj/BwAFAAAAAAAKAPj/BwAFAAAAAAANAPv/BwAIAAAAAAAOAPv/BwAIAAAAAAAPAPv/BwAIAAAAAAAQAPv/BwAIAAAAAAARAPv/BwAIAAAAAAASAPv/BwAIAAAAAAAYAP//BwAIAAAAAAAXAP//BwAIAAAAAAAWAP//BwAIAAAAAAAVAP//BwAIAAAAAAAUAP//BwAIAAAAAAATAP//BwAIAAAAAAASAP//BwAIAAAAAAARAP//BwAIAAAAAAAOAP//BwAIAAAAAAANAP//BwAIAAAAAAAMAP//BwAHAAAAAAAJAPn/BwAFAAAAAAAKAPn/BwAFAAAAAAALAPz/BwAFAAEAAAAMAPz/BwAFAAEAAAAMAP3/BwAFAAEAAAANAP3/BwAFAAEAAAAOAP3/BwAFAAEAAAAJAPv/BwAIAAAAAAAJAPz/BwAFAAEAAAAJAP3/BwAFAAEAAAAKAPv/BwAIAAAAAAAKAPz/BwAFAAEAAAAKAP3/BwAFAAEAAAALAP3/BwAFAAEAAAAMAPr/BwACAAEAAAAMAPv/BwAIAAAAAAANAPz/BwAFAAEAAAAOAPz/BwAFAAEAAAAPAPz/BwAFAAEAAAAPAP3/BwAFAAEAAAAQAPz/BwAFAAEAAAAQAP3/BwAFAAEAAAARAPz/BwAFAAEAAAARAP3/BwAFAAEAAAASAPz/BwAFAAEAAAASAP3/BwAFAAEAAAAJAP//BwAIAAAAAAAKAP//BwAIAAAAAAAPAP7/BwACAAEAAAAQAP7/BwACAAEAAAAJAAAABwAFAAEAAAAJAAEABwAFAAEAAAAKAAAABwAFAAEAAAAKAAEABwAFAAEAAAAMAAAABwAFAAEAAAAMAAEABwAFAAEAAAANAAAABwAFAAEAAAANAAEABwAFAAEAAAAOAAAABwAFAAEAAAAOAAEABwAFAAEAAAAPAAAABwAFAAEAAAAPAAEABwAFAAEAAAAQAAAABwAFAAEAAAAQAAEABwAFAAEAAAARAAAABwAFAAEAAAARAAEABwAFAAEAAAASAAAABwAFAAEAAAASAAEABwAFAAEAAAATAAAABwAFAAEAAAATAAEABwAFAAEAAAAUAAAABwAFAAEAAAAUAAEABwAFAAEAAAAVAAAABwAFAAEAAAAVAAEABwAFAAEAAAAWAAAABwAFAAEAAAAWAAEABwAFAAEAAAAXAAAABwAFAAEAAAAXAAEABwAFAAEAAAAYAAAABwAFAAEAAAAYAAEABwAFAAEAAAAPAP//BwAIAAAAAAAQAP//BwAIAAAAAAALAP7/BwADAAEAAAA=")
+tile_set = ExtResource("3_hqivc")
+
+[node name="Bush" type="Sprite2D" parent="Ground" index="2"]
+modulate = Color(0.67, 0.67, 0.67, 0.937255)
+position = Vector2(788, 271)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("4_2b3hl")
+
+[node name="Bush4" type="Sprite2D" parent="Ground" index="3"]
+modulate = Color(0.67, 0.67, 0.67, 0.937255)
+position = Vector2(1922, -205)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("4_2b3hl")
+
+[node name="Bush3" type="Sprite2D" parent="Ground" index="4"]
+modulate = Color(0.67, 0.67, 0.67, 0.937255)
+position = Vector2(1920, -176)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("4_2b3hl")
+
+[node name="Bush2" type="Sprite2D" parent="Ground" index="5"]
+modulate = Color(0.67, 0.67, 0.67, 1)
+position = Vector2(2480, 275)
+scale = Vector2(0.53, 0.53)
+texture = ExtResource("5_77v4g")
+
+[node name="TileMapLayer" type="TileMapLayer" parent="Ground" index="6"]
+tile_map_data = PackedByteArray("AAAIAPv/BwADAAYAAAAIAPr/BwABAAYAAAAIAPn/BwACAAIAAAAIAPj/BwADAAYAAAAIAPf/BwABAAYAAAAJAPf/BwACAAYAAAAKAPf/BwACAAYAAAALAPf/BwAAAAYAAAAIAP7/BwABAAYAAAAIAP//BwADAAYAAAAIAAAABwAEAAQAAAAIAAEABwAEAAQAAAAKAAIABwACAAYAAAALAAIABwACAAYAAAALAAEABwADAAUAAAALAP7/BwACAAYAAAALAP//BwAEAAYAAAALAAAABwAIAAIAAAAKAP7/BwAFAAMAAAAJAP7/BwAEAAMAAAALAPj/BwAFAAYAAAALAPn/BwAIAAYAAAALAPr/BwAAAAYAAAALAPv/BwAFAAYAAAAMAP7/BwACAAYAAAANAP7/BwACAAYAAAAQAAIABwACAAYAAAAMAAIABwACAAYAAAAOAAIABwACAAYAAAANAAIABwACAAYAAAAPAAIABwACAAYAAAAOAPr/BwACAAYAAAAPAPr/BwACAAYAAAAQAPr/BwACAAYAAAARAPr/BwACAAYAAAASAPr/BwACAAYAAAANAPr/BwACAAYAAAATAPr/BwAAAAYAAAATAPv/BwAFAAYAAAATAPz/BwADAAUAAAATAP3/BwADAAUAAAATAP7/BwACAAYAAAASAP7/BwACAAYAAAARAP7/BwACAAYAAAAOAP7/BwACAAYAAAARAAIABwACAAYAAAASAAIABwACAAYAAAATAAIABwACAAYAAAAVAAIABwACAAYAAAAUAAIABwACAAYAAAAWAAIABwACAAYAAAAUAP7/BwACAAYAAAAVAP7/BwACAAYAAAAWAP7/BwACAAYAAAAXAP7/BwACAAYAAAAYAP7/BwACAAYAAAAZAP7/BwAAAAYAAAAZAP//BwAFAAYAAAAZAAAABwADAAUAAAAZAAEABwADAAUAAAAZAAIABwAAAAYAAAAYAAIABwACAAYAAAAXAAIABwACAAYAAAAJAPj/BwAEAAYAAAAKAPj/BwAEAAYAAAANAPv/BwAEAAYAAAAOAPv/BwAEAAYAAAAPAPv/BwAEAAYAAAAQAPv/BwAEAAYAAAARAPv/BwAEAAYAAAASAPv/BwAEAAYAAAAYAP//BwAEAAYAAAAXAP//BwAEAAYAAAAWAP//BwAEAAYAAAAVAP//BwAEAAYAAAAUAP//BwAEAAYAAAATAP//BwAEAAYAAAASAP//BwAEAAYAAAARAP//BwAEAAYAAAAOAP//BwAEAAYAAAANAP//BwAEAAYAAAAMAP//BwAEAAYAAAAIAAMABwABAAYAAAAJAAMABwACAAYAAAAKAAMABwACAAYAAAALAAMABwACAAYAAAAMAAMABwACAAYAAAANAAMABwACAAYAAAAOAAMABwACAAYAAAAPAAMABwACAAYAAAAQAAMABwACAAYAAAARAAMABwACAAYAAAASAAMABwACAAYAAAATAAMABwACAAYAAAAUAAMABwACAAYAAAAXAAMABwACAAYAAAAYAAMABwACAAYAAAAWAAMABwACAAYAAAAVAAMABwACAAYAAAAZAAMABwAAAAYAAAAJAAIABwACAAYAAAAIAAIABwABAAYAAAAKAPv/BwAEAAYAAAAKAPr/BwACAAYAAAA=")
+tile_set = ExtResource("3_hqivc")
+
+[node name="TileMapLayer2" type="TileMapLayer" parent="Ground" index="7"]
+tile_map_data = PackedByteArray("AAAIAPv/BwACAAIAAAAIAPr/BwAHAAMAAAAIAPn/BwACAAIAAAAIAPj/BwACAAIAAAAIAPf/BwAFAAQAAAAJAPf/BwAHAAUAAAAKAPf/BwAHAAUAAAALAPf/BwAGAAQAAAAIAP7/BwAHAAQAAAAIAP//BwAEAAQAAAAIAAAABwAEAAQAAAAIAAEABwAEAAQAAAAIAAIABwABAAIAAAAJAAIABwAGAAUAAAAKAAIABwAGAAUAAAALAAIABwAEAAUAAAALAAEABwADAAUAAAALAP7/BwACAAUAAAALAP//BwADAAUAAAALAAAABwAIAAIAAAAKAP7/BwAFAAMAAAAJAP7/BwAEAAMAAAALAPj/BwAIAAYAAAALAPn/BwAIAAYAAAALAPr/BwAAAAQAAAAKAPr/BwAIAAUAAAALAPv/BwAIAAYAAAAMAP7/BwAFAAUAAAANAP7/BwAFAAUAAAAQAAIABwAGAAUAAAAMAAIABwAGAAUAAAAOAAIABwAGAAUAAAANAAIABwAGAAUAAAAPAAIABwAGAAUAAAAOAPr/BwAFAAUAAAAPAPr/BwAFAAUAAAAQAPr/BwAFAAUAAAARAPr/BwAFAAUAAAASAPr/BwAFAAUAAAATAPr/BwACAAUAAAATAPv/BwADAAUAAAATAPz/BwADAAUAAAATAP3/BwADAAUAAAATAP7/BwAAAAcAAAASAP7/BwAFAAUAAAARAP7/BwAFAAUAAAAOAP7/BwAFAAUAAAARAAIABwAGAAUAAAASAAIABwAGAAUAAAATAAIABwAGAAUAAAAVAAIABwAGAAUAAAAUAAIABwAGAAUAAAAWAAIABwAGAAUAAAAUAP7/BwAFAAUAAAAVAP7/BwAFAAUAAAAWAP7/BwAFAAUAAAAXAP7/BwAFAAUAAAAYAP7/BwAFAAUAAAAZAP7/BwACAAUAAAAZAP//BwADAAUAAAAZAAAABwADAAUAAAAZAAEABwADAAUAAAAZAAIABwAEAAUAAAAYAAIABwAGAAUAAAAXAAIABwAGAAUAAAALAPz/BwAIAAQAAAAMAPr/BwAFAAMAAAAQAP7/BwAFAAMAAAAPAP7/BwAEAAMAAAANAPr/BwAFAAUAAAAZAAMABwAFAAYAAAAYAAMABwAEAAYAAAAXAAMABwAEAAYAAAAWAAMABwAEAAYAAAAVAAMABwAEAAYAAAAUAAMABwAEAAYAAAATAAMABwAEAAYAAAASAAMABwAEAAYAAAARAAMABwAEAAYAAAAQAAMABwAEAAYAAAAPAAMABwAEAAYAAAAOAAMABwAEAAYAAAANAAMABwAEAAYAAAAMAAMABwAEAAYAAAALAAMABwAEAAYAAAAKAAMABwAEAAYAAAAJAAMABwAEAAYAAAAIAAMABwADAAYAAAAIAPz/BwAAAAMAAAAIAP3/BwABAAMAAAA=")
+tile_set = ExtResource("3_hqivc")
+
+[node name="Gallery" type="Control" parent="." index="1"]
+custom_minimum_size = Vector2(3000, 1500)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1500.0
+offset_top = -750.0
+offset_right = 2000.0
+offset_bottom = 750.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BoxContainerA" type="BoxContainer" parent="Gallery" index="0"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.505
+anchor_right = 1.0
+anchor_bottom = 0.71
+offset_left = -644.0
+offset_top = -80.0
+grow_horizontal = 0
+grow_vertical = 0
+mouse_filter = 0
+theme_override_constants/separation = 15
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="Gallery/BoxContainerA" index="0"]
+custom_minimum_size = Vector2(50, 80)
+layout_mode = 2
+mouse_filter = 2
+texture = SubResource("CanvasTexture_2b3hl")
+stretch_mode = 5
+
+[node name="Button" type="Button" parent="Gallery/BoxContainerA/TextureRect" index="0"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.48
+anchor_right = 1.0
+anchor_bottom = 0.521
+offset_top = -4.0
+offset_bottom = 4.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect2" type="TextureRect" parent="Gallery/BoxContainerA" index="1"]
+custom_minimum_size = Vector2(50, 80)
+layout_mode = 2
+mouse_filter = 2
+texture = SubResource("CanvasTexture_2b3hl")
+stretch_mode = 5
+
+[node name="Button" type="Button" parent="Gallery/BoxContainerA/TextureRect2" index="0"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.479
+anchor_right = 1.0
+anchor_bottom = 0.523
+offset_top = -4.0
+offset_bottom = 4.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect3" type="TextureRect" parent="Gallery/BoxContainerA" index="2"]
+custom_minimum_size = Vector2(50, 80)
+layout_mode = 2
+mouse_filter = 2
+texture = SubResource("CanvasTexture_2b3hl")
+stretch_mode = 5
+
+[node name="Button" type="Button" parent="Gallery/BoxContainerA/TextureRect3" index="0"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.478
+anchor_right = 1.0
+anchor_bottom = 0.522
+offset_top = -4.0
+offset_bottom = 4.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect4" type="TextureRect" parent="Gallery/BoxContainerA" index="3"]
+custom_minimum_size = Vector2(50, 80)
+layout_mode = 2
+mouse_filter = 2
+texture = SubResource("CanvasTexture_2b3hl")
+stretch_mode = 5
+
+[node name="Button" type="Button" parent="Gallery/BoxContainerA/TextureRect4" index="0"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.478
+anchor_right = 1.0
+anchor_bottom = 0.522
+offset_top = -4.0
+offset_bottom = 4.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect5" type="TextureRect" parent="Gallery/BoxContainerA" index="4"]
+custom_minimum_size = Vector2(50, 80)
+layout_mode = 2
+mouse_filter = 2
+texture = SubResource("CanvasTexture_2b3hl")
+stretch_mode = 5
+
+[node name="Button" type="Button" parent="Gallery/BoxContainerA/TextureRect5" index="0"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.478
+anchor_right = 1.0
+anchor_bottom = 0.522
+offset_top = -4.0
+offset_bottom = 4.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect6" type="TextureRect" parent="Gallery/BoxContainerA" index="5"]
+custom_minimum_size = Vector2(50, 80)
+layout_mode = 2
+mouse_filter = 2
+texture = SubResource("CanvasTexture_2b3hl")
+stretch_mode = 5
+
+[node name="Button" type="Button" parent="Gallery/BoxContainerA/TextureRect6" index="0"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.478
+anchor_right = 1.0
+anchor_bottom = 0.522
+offset_top = -4.0
+offset_bottom = 4.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect7" type="TextureRect" parent="Gallery/BoxContainerA" index="6"]
+custom_minimum_size = Vector2(50, 80)
+layout_mode = 2
+mouse_filter = 2
+texture = SubResource("CanvasTexture_2b3hl")
+stretch_mode = 5
+
+[node name="Button" type="Button" parent="Gallery/BoxContainerA/TextureRect7" index="0"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.478
+anchor_right = 1.0
+anchor_bottom = 0.522
+offset_top = -4.0
+offset_bottom = 4.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect8" type="TextureRect" parent="Gallery/BoxContainerA" index="7"]
+custom_minimum_size = Vector2(50, 80)
+layout_mode = 2
+mouse_filter = 2
+texture = SubResource("CanvasTexture_2b3hl")
+stretch_mode = 5
+
+[node name="Button" type="Button" parent="Gallery/BoxContainerA/TextureRect8" index="0"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.48
+anchor_right = 1.0
+anchor_bottom = 0.52
+offset_top = -4.0
+offset_bottom = 4.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect9" type="TextureRect" parent="Gallery/BoxContainerA" index="8"]
+custom_minimum_size = Vector2(50, 80)
+layout_mode = 2
+mouse_filter = 2
+texture = SubResource("CanvasTexture_2b3hl")
+stretch_mode = 5
+
+[node name="Button" type="Button" parent="Gallery/BoxContainerA/TextureRect9" index="0"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.478
+anchor_right = 1.0
+anchor_bottom = 0.522
+offset_top = -4.0
+offset_bottom = 4.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect10" type="TextureRect" parent="Gallery/BoxContainerA" index="9"]
+custom_minimum_size = Vector2(50, 80)
+layout_mode = 2
+mouse_filter = 2
+texture = SubResource("CanvasTexture_2b3hl")
+stretch_mode = 5
+
+[node name="Button" type="Button" parent="Gallery/BoxContainerA/TextureRect10" index="0"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.478
+anchor_right = 1.0
+anchor_bottom = 0.522
+offset_top = -4.0
+offset_bottom = 4.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BoxContainerB" type="BoxContainer" parent="Gallery" index="1"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.686
+anchor_top = 0.12
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -25.0
+offset_right = 25.0
+offset_bottom = 80.0
+grow_horizontal = 2
+mouse_filter = 0
+theme_override_constants/separation = 15
+
+[node name="TextureRect13" type="TextureRect" parent="Gallery/BoxContainerB" index="0"]
+custom_minimum_size = Vector2(50, 80)
+layout_mode = 2
+mouse_filter = 2
+texture = SubResource("CanvasTexture_2b3hl")
+stretch_mode = 5
+
+[node name="Button" type="Button" parent="Gallery/BoxContainerB/TextureRect13" index="0"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.478
+anchor_right = 1.0
+anchor_bottom = 0.522
+offset_top = -4.0
+offset_bottom = 4.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect14" type="TextureRect" parent="Gallery/BoxContainerB" index="1"]
+custom_minimum_size = Vector2(50, 80)
+layout_mode = 2
+mouse_filter = 2
+texture = SubResource("CanvasTexture_2b3hl")
+stretch_mode = 5
+
+[node name="Button" type="Button" parent="Gallery/BoxContainerB/TextureRect14" index="0"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.478
+anchor_right = 1.0
+anchor_bottom = 0.522
+offset_top = -4.0
+offset_bottom = 4.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect15" type="TextureRect" parent="Gallery/BoxContainerB" index="2"]
+custom_minimum_size = Vector2(50, 80)
+layout_mode = 2
+mouse_filter = 2
+texture = SubResource("CanvasTexture_2b3hl")
+stretch_mode = 5
+
+[node name="Button2" type="Button" parent="Gallery/BoxContainerB/TextureRect15" index="0"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.478
+anchor_right = 1.0
+anchor_bottom = 0.522
+offset_top = -4.0
+offset_bottom = 4.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect16" type="TextureRect" parent="Gallery/BoxContainerB" index="3"]
+custom_minimum_size = Vector2(50, 80)
+layout_mode = 2
+mouse_filter = 2
+texture = SubResource("CanvasTexture_2b3hl")
+stretch_mode = 5
+
+[node name="Button" type="Button" parent="Gallery/BoxContainerB/TextureRect16" index="0"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.478
+anchor_right = 1.0
+anchor_bottom = 0.522
+offset_top = -4.0
+offset_bottom = 4.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect17" type="TextureRect" parent="Gallery/BoxContainerB" index="4"]
+custom_minimum_size = Vector2(50, 80)
+layout_mode = 2
+mouse_filter = 2
+texture = SubResource("CanvasTexture_2b3hl")
+stretch_mode = 5
+
+[node name="Button" type="Button" parent="Gallery/BoxContainerB/TextureRect17" index="0"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.478
+anchor_right = 1.0
+anchor_bottom = 0.522
+offset_top = -4.0
+offset_bottom = 4.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect18" type="TextureRect" parent="Gallery/BoxContainerB" index="5"]
+custom_minimum_size = Vector2(50, 80)
+layout_mode = 2
+mouse_filter = 2
+texture = SubResource("CanvasTexture_2b3hl")
+stretch_mode = 5
+
+[node name="Button" type="Button" parent="Gallery/BoxContainerB/TextureRect18" index="0"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.478
+anchor_right = 1.0
+anchor_bottom = 0.522
+offset_top = -4.0
+offset_bottom = 4.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect19" type="TextureRect" parent="Gallery/BoxContainerB" index="6"]
+custom_minimum_size = Vector2(50, 80)
+layout_mode = 2
+mouse_filter = 2
+texture = SubResource("CanvasTexture_2b3hl")
+stretch_mode = 5
+
+[node name="Button" type="Button" parent="Gallery/BoxContainerB/TextureRect19" index="0"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.478
+anchor_right = 1.0
+anchor_bottom = 0.522
+offset_top = -4.0
+offset_bottom = 4.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect20" type="TextureRect" parent="Gallery/BoxContainerB" index="7"]
+custom_minimum_size = Vector2(50, 80)
+layout_mode = 2
+mouse_filter = 2
+texture = SubResource("CanvasTexture_2b3hl")
+stretch_mode = 5
+
+[node name="Button" type="Button" parent="Gallery/BoxContainerB/TextureRect20" index="0"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.478
+anchor_right = 1.0
+anchor_bottom = 0.522
+offset_top = -4.0
+offset_bottom = 4.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect21" type="TextureRect" parent="Gallery/BoxContainerB" index="8"]
+custom_minimum_size = Vector2(50, 80)
+layout_mode = 2
+mouse_filter = 2
+texture = SubResource("CanvasTexture_2b3hl")
+stretch_mode = 5
+
+[node name="Button" type="Button" parent="Gallery/BoxContainerB/TextureRect21" index="0"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.478
+anchor_right = 1.0
+anchor_bottom = 0.522
+offset_top = -4.0
+offset_bottom = 4.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect22" type="TextureRect" parent="Gallery/BoxContainerB" index="9"]
+custom_minimum_size = Vector2(50, 80)
+layout_mode = 2
+mouse_filter = 2
+texture = SubResource("CanvasTexture_2b3hl")
+stretch_mode = 5
+
+[node name="Button" type="Button" parent="Gallery/BoxContainerB/TextureRect22" index="0"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.478
+anchor_right = 1.0
+anchor_bottom = 0.522
+offset_top = -4.0
+offset_bottom = 4.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect23" type="TextureRect" parent="Gallery/BoxContainerB" index="10"]
+custom_minimum_size = Vector2(50, 80)
+layout_mode = 2
+mouse_filter = 2
+texture = SubResource("CanvasTexture_2b3hl")
+stretch_mode = 5
+
+[node name="Button" type="Button" parent="Gallery/BoxContainerB/TextureRect23" index="0"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.478
+anchor_right = 1.0
+anchor_bottom = 0.522
+offset_top = -4.0
+offset_bottom = 4.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect24" type="TextureRect" parent="Gallery/BoxContainerB" index="11"]
+custom_minimum_size = Vector2(50, 80)
+layout_mode = 2
+mouse_filter = 2
+texture = SubResource("CanvasTexture_2b3hl")
+stretch_mode = 5
+
+[node name="Button" type="Button" parent="Gallery/BoxContainerB/TextureRect24" index="0"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.478
+anchor_right = 1.0
+anchor_bottom = 0.522
+offset_top = -4.0
+offset_bottom = 4.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect25" type="TextureRect" parent="Gallery/BoxContainerB" index="12"]
+custom_minimum_size = Vector2(50, 80)
+layout_mode = 2
+mouse_filter = 2
+texture = SubResource("CanvasTexture_2b3hl")
+stretch_mode = 5
+
+[node name="Button" type="Button" parent="Gallery/BoxContainerB/TextureRect25" index="0"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.478
+anchor_right = 1.0
+anchor_bottom = 0.522
+offset_top = -4.0
+offset_bottom = 4.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ImagePopUp" type="PopupPanel" parent="Gallery" index="2"]
+
+[node name="BigPopUp" type="TextureRect" parent="Gallery/ImagePopUp" index="1"]
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 96.0
+offset_bottom = 96.0
+mouse_filter = 2
+texture = SubResource("CanvasTexture_77v4g")
+
+[node name="Sprites" type="Node2D" parent="." index="2"]
+
+[node name="JenniferChar" type="CharacterBody2D" parent="Sprites" index="0"]
+script = ExtResource("7_333nj")
+
+[node name="Jennifer" type="AnimatedSprite2D" parent="Sprites/JenniferChar" index="0"]
+position = Vector2(1196, 271)
+scale = Vector2(1.2, 1.2)
+sprite_frames = SubResource("SpriteFrames_vrkev")
+autoplay = "default"
+frame_progress = 0.0484741
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprites/JenniferChar" index="1"]
+position = Vector2(1196, 265)
+shape = SubResource("CapsuleShape2D_ukexp")
+
+[node name="ChatDetectionArea" type="Area2D" parent="Sprites/JenniferChar" index="2"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprites/JenniferChar/ChatDetectionArea" index="0"]
+position = Vector2(1202, 271)
+shape = SubResource("RectangleShape2D_ul6jp")
+
+[node name="Dialogue" parent="Sprites/JenniferChar" index="3" instance=ExtResource("9_n0a6u")]
+
+[node name="SimonChar" type="CharacterBody2D" parent="Sprites" index="1"]
+
+[node name="Simon" type="AnimatedSprite2D" parent="Sprites/SimonChar" index="0"]
+position = Vector2(77, 170)
+scale = Vector2(1.2, 1.2)
+sprite_frames = SubResource("SpriteFrames_7il7j")
+autoplay = "default"
+frame_progress = 0.501996
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprites/SimonChar" index="1"]
+position = Vector2(77, 168)
+shape = SubResource("CapsuleShape2D_xfjx7")
+
+[node name="ChatDetectionArea" type="Area2D" parent="Sprites/SimonChar" index="2"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprites/SimonChar/ChatDetectionArea" index="0"]
+position = Vector2(94, 177)
+shape = SubResource("RectangleShape2D_ul6jp")
+
+[node name="JamieChar" type="CharacterBody2D" parent="Sprites" index="2"]
+script = ExtResource("11_vrkev")
+
+[node name="Jamie" type="AnimatedSprite2D" parent="Sprites/JamieChar" index="0"]
+position = Vector2(293, -201)
+scale = Vector2(1.2, 1.2)
+sprite_frames = SubResource("SpriteFrames_cqkff")
+autoplay = "default"
+frame_progress = 0.287883
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprites/JamieChar" index="1"]
+position = Vector2(288, -196)
+shape = SubResource("CapsuleShape2D_333nj")
+
+[node name="ChatDetectionArea" type="Area2D" parent="Sprites/JamieChar" index="2"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprites/JamieChar/ChatDetectionArea" index="0"]
+position = Vector2(291, -181)
+shape = SubResource("RectangleShape2D_ul6jp")
+
+[node name="Dialogue" parent="Sprites/JamieChar" index="3" instance=ExtResource("9_n0a6u")]
+offset_left = 82.0
+offset_top = -275.0
+offset_right = 82.0
+offset_bottom = -275.0
+d_file = "<null>"
+
+[node name="Toilet" type="Sprite2D" parent="Sprites" index="3"]
+position = Vector2(291, -471)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("9_xfjx7")
+
+[node name="Table" type="Sprite2D" parent="Sprites" index="4"]
+position = Vector2(409, 195)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("10_333nj")
+
+[node name="Player" parent="." index="3"]
+position = Vector2(99, -53)
+scale = Vector2(2.5, 2.5)
+
+[node name="ExitArea" type="Area2D" parent="." index="4"]
+collision_layer = 16
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ExitArea" index="0"]
+position = Vector2(1.875, -57.5625)
+shape = SubResource("RectangleShape2D_2b3hl")
+
+[node name="Area2D" type="Area2D" parent="." index="5"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" index="0"]
+position = Vector2(430.125, -326)
+shape = SubResource("RectangleShape2D_77v4g")
+
+[node name="Table2" type="Sprite2D" parent="Area2D" index="1"]
+position = Vector2(85, 215)
+scale = Vector2(2, 1.838)
+texture = ExtResource("6_77v4g")
+
+[connection signal="area_entered" from="Sprites/JenniferChar/ChatDetectionArea" to="Sprites/JenniferChar" method="_on_chat_detection_area_area_entered"]
+[connection signal="body_entered" from="Sprites/JamieChar/ChatDetectionArea" to="Sprites/JamieChar" method="_on_chat_detection_area_body_entered"]
+[connection signal="body_exited" from="Sprites/JamieChar/ChatDetectionArea" to="Sprites/JamieChar" method="_on_chat_detection_area_body_exited"]
+[connection signal="dialogue_finished" from="Sprites/JamieChar/Dialogue" to="Sprites/JamieChar" method="_on_dialogue_dialogue_finished"]
+[connection signal="body_entered" from="ExitArea" to="." method="_on_exit_area_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

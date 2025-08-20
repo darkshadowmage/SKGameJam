@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=4 uid="uid://bjk07xthxxsvm"]
+[gd_scene load_steps=44 format=4 uid="uid://bjk07xthxxsvm"]
 
 [ext_resource type="PackedScene" uid="uid://dosu6exalldqs" path="res://scenes/level.tscn" id="1_ou6xt"]
 [ext_resource type="Script" uid="uid://bak3o0uoqqt8b" path="res://scenes/inside.gd" id="2_01b43"]
@@ -6,10 +6,151 @@
 [ext_resource type="Texture2D" uid="uid://b1ge84nx1ehrb" path="res://art/objects/bush.png" id="4_2b3hl"]
 [ext_resource type="Texture2D" uid="uid://q4y6k0hpv33" path="res://art/objects/bush2.png" id="5_77v4g"]
 [ext_resource type="Texture2D" uid="uid://04bow2p3tmu6" path="res://art/objects/table2.png" id="6_77v4g"]
+[ext_resource type="Texture2D" uid="uid://b2gj2lrq4oc6h" path="res://art/chars/Spritesheets/jennifer_standing-Sheet.png" id="6_d3bmk"]
+[ext_resource type="Script" uid="uid://da64k6ahxheed" path="res://scenes/jennifer_char.gd" id="7_333nj"]
+[ext_resource type="Texture2D" uid="uid://baqi5wwems0e1" path="res://art/chars/Spritesheets/simon-Sheet.png" id="7_ukexp"]
+[ext_resource type="PackedScene" uid="uid://dv4gha6gvdelh" path="res://scenes/dialogue_kata.tscn" id="8_n0a6u"]
+[ext_resource type="Texture2D" uid="uid://bb2774u20xp5r" path="res://art/chars/Spritesheets/ritter_jamie_standing-Sheet.png" id="8_ul6jp"]
+[ext_resource type="PackedScene" uid="uid://b7m82i6wokd0u" path="res://dialogue/dialogue.tscn" id="9_n0a6u"]
+[ext_resource type="Script" uid="uid://bnhlfavvk58r7" path="res://scenes/simon_char.gd" id="9_vrkev"]
+[ext_resource type="Texture2D" uid="uid://br0maqkd8t5it" path="res://art/objects/toilet.png" id="9_xfjx7"]
+[ext_resource type="Texture2D" uid="uid://dhrtoas26ll4w" path="res://art/objects/table.png" id="10_333nj"]
+[ext_resource type="PackedScene" uid="uid://cw8nshdljtev1" path="res://dialogue/dialogue_simon.tscn" id="11_6b8hr"]
+[ext_resource type="Script" uid="uid://bm2uoqp8t1e0e" path="res://scenes/jamie_char.gd" id="11_vrkev"]
+[ext_resource type="Script" uid="uid://buoy2pb11sbdx" path="res://dialogue/dialogue_simon.gd" id="12_4qhti"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_2b3hl"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_77v4g"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_udlaf"]
+atlas = ExtResource("6_d3bmk")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c000n"]
+atlas = ExtResource("6_d3bmk")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4qeqt"]
+atlas = ExtResource("6_d3bmk")
+region = Rect2(256, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ukexp"]
+atlas = ExtResource("6_d3bmk")
+region = Rect2(384, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ul6jp"]
+atlas = ExtResource("6_d3bmk")
+region = Rect2(512, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xfjx7"]
+atlas = ExtResource("6_d3bmk")
+region = Rect2(640, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_333nj"]
+atlas = ExtResource("6_d3bmk")
+region = Rect2(768, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n0a6u"]
+atlas = ExtResource("6_d3bmk")
+region = Rect2(896, 0, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vrkev"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_udlaf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c000n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4qeqt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ukexp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ul6jp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xfjx7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_333nj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n0a6u")
+}],
+"loop": true,
+"name": &"default",
+"speed": 1.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ukexp"]
+radius = 15.0
+height = 100.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n0a6u"]
+size = Vector2(184, 161)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vrkev"]
+atlas = ExtResource("7_ukexp")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7il7j"]
+atlas = ExtResource("7_ukexp")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7il7j"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vrkev")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7il7j")
+}],
+"loop": true,
+"name": &"default",
+"speed": 2.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7il7j"]
+radius = 22.0
+height = 118.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6b8hr"]
+size = Vector2(146, 208.5)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6b8hr"]
+atlas = ExtResource("8_ul6jp")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4qhti"]
+atlas = ExtResource("8_ul6jp")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_cqkff"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6b8hr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4qhti")
+}],
+"loop": true,
+"name": &"default",
+"speed": 1.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_333nj"]
+radius = 17.0
+height = 100.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ul6jp"]
+size = Vector2(141, 177)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2b3hl"]
 size = Vector2(58.125, 139.438)
@@ -551,21 +692,123 @@ offset_bottom = 96.0
 mouse_filter = 2
 texture = SubResource("CanvasTexture_77v4g")
 
-[node name="Player" parent="." index="2"]
-position = Vector2(99, -53)
+[node name="Sprites" type="Node2D" parent="." index="2"]
+
+[node name="JenniferChar" type="CharacterBody2D" parent="Sprites" index="0"]
+script = ExtResource("7_333nj")
+
+[node name="Jennifer" type="AnimatedSprite2D" parent="Sprites/JenniferChar" index="0"]
+position = Vector2(1196, 271)
+scale = Vector2(1.2, 1.2)
+sprite_frames = SubResource("SpriteFrames_vrkev")
+autoplay = "default"
+frame_progress = 0.0484741
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprites/JenniferChar" index="1"]
+position = Vector2(1196, 265)
+shape = SubResource("CapsuleShape2D_ukexp")
+
+[node name="Area2D" type="Area2D" parent="Sprites/JenniferChar" index="2"]
+collision_layer = 2
+
+[node name="ChatDetectKata" type="CollisionShape2D" parent="Sprites/JenniferChar/Area2D" index="0"]
+position = Vector2(1199, 274)
+shape = SubResource("RectangleShape2D_n0a6u")
+
+[node name="DialogueKata" parent="Sprites/JenniferChar" index="3" instance=ExtResource("8_n0a6u")]
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 1139.0
+offset_top = 354.0
+offset_right = 1339.0
+offset_bottom = 454.0
+grow_horizontal = 1
+grow_vertical = 1
+mouse_filter = 2
+
+[node name="SimonChar" type="CharacterBody2D" parent="Sprites" index="1"]
+script = ExtResource("9_vrkev")
+
+[node name="Simon" type="AnimatedSprite2D" parent="Sprites/SimonChar" index="0"]
+position = Vector2(77, 170)
+scale = Vector2(1.2, 1.2)
+sprite_frames = SubResource("SpriteFrames_7il7j")
+autoplay = "default"
+frame_progress = 0.501996
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprites/SimonChar" index="1"]
+position = Vector2(76, 165)
+shape = SubResource("CapsuleShape2D_7il7j")
+
+[node name="Area2D" type="Area2D" parent="Sprites/SimonChar" index="2"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprites/SimonChar/Area2D" index="0"]
+position = Vector2(99, 191)
+shape = SubResource("RectangleShape2D_6b8hr")
+
+[node name="Dialogue_Simon" parent="Sprites/SimonChar" index="3" instance=ExtResource("11_6b8hr")]
+offset_left = 16.0
+offset_top = 22.0
+offset_right = 216.0
+offset_bottom = 122.0
+script = ExtResource("12_4qhti")
+
+[node name="JamieChar" type="CharacterBody2D" parent="Sprites" index="2"]
+script = ExtResource("11_vrkev")
+
+[node name="Jamie" type="AnimatedSprite2D" parent="Sprites/JamieChar" index="0"]
+position = Vector2(293, -201)
+scale = Vector2(1.2, 1.2)
+sprite_frames = SubResource("SpriteFrames_cqkff")
+autoplay = "default"
+frame_progress = 0.287883
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprites/JamieChar" index="1"]
+position = Vector2(288, -196)
+shape = SubResource("CapsuleShape2D_333nj")
+
+[node name="ChatDetectionArea" type="Area2D" parent="Sprites/JamieChar" index="2"]
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprites/JamieChar/ChatDetectionArea" index="0"]
+position = Vector2(291, -181)
+shape = SubResource("RectangleShape2D_ul6jp")
+
+[node name="Dialogue" parent="Sprites/JamieChar" index="3" instance=ExtResource("9_n0a6u")]
+offset_left = 208.0
+offset_top = -353.0
+offset_right = 408.0
+offset_bottom = -253.0
+mouse_filter = 2
+
+[node name="Toilet" type="Sprite2D" parent="Sprites" index="3"]
+position = Vector2(291, -471)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("9_xfjx7")
+
+[node name="Table" type="Sprite2D" parent="Sprites" index="4"]
+position = Vector2(409, 195)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("10_333nj")
+
+[node name="Table2" type="Sprite2D" parent="Sprites" index="5"]
+position = Vector2(85, 215)
+scale = Vector2(2, 1.838)
+texture = ExtResource("6_77v4g")
+
+[node name="Player" parent="." index="3"]
+position = Vector2(76, -61)
 scale = Vector2(2.5, 2.5)
 
-[node name="ExitArea" type="Area2D" parent="." index="3"]
+[node name="ExitArea" type="Area2D" parent="." index="4"]
 collision_layer = 16
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ExitArea" index="0"]
 position = Vector2(1.875, -57.5625)
 shape = SubResource("RectangleShape2D_2b3hl")
-
-[node name="Table2" type="Sprite2D" parent="." index="4"]
-position = Vector2(75, 220)
-scale = Vector2(1.565, 1.565)
-texture = ExtResource("6_77v4g")
 
 [node name="Area2D" type="Area2D" parent="." index="5"]
 
@@ -573,5 +816,14 @@ texture = ExtResource("6_77v4g")
 position = Vector2(430.125, -326)
 shape = SubResource("RectangleShape2D_77v4g")
 
+[connection signal="body_entered" from="Sprites/JenniferChar/Area2D" to="Sprites/JenniferChar" method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Sprites/JenniferChar/Area2D" to="Sprites/JenniferChar" method="_on_area_2d_body_exited"]
+[connection signal="dialogue_finished" from="Sprites/JenniferChar/DialogueKata" to="Sprites/JenniferChar" method="_on_dialogue_kata_dialogue_finished"]
+[connection signal="body_entered" from="Sprites/SimonChar/Area2D" to="Sprites/SimonChar" method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Sprites/SimonChar/Area2D" to="Sprites/SimonChar" method="_on_area_2d_body_exited"]
+[connection signal="dialogue_finished" from="Sprites/SimonChar/Dialogue_Simon" to="Sprites/SimonChar" method="_on_dialogue_simon_dialogue_finished"]
+[connection signal="body_entered" from="Sprites/JamieChar/ChatDetectionArea" to="Sprites/JamieChar" method="_on_chat_detection_area_body_entered"]
+[connection signal="body_exited" from="Sprites/JamieChar/ChatDetectionArea" to="Sprites/JamieChar" method="_on_chat_detection_area_body_exited"]
+[connection signal="dialogue_finished" from="Sprites/JamieChar/Dialogue" to="Sprites/JamieChar" method="_on_dialogue_dialogue_finished"]
 [connection signal="body_entered" from="ExitArea" to="." method="_on_exit_area_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
