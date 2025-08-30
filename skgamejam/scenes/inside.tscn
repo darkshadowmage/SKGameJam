@@ -152,7 +152,6 @@ height = 100.0
 size = Vector2(141, 177)
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_7il7j"]
-load_path = "res://.godot/imported/toilet.png-3b7ea49cf64cbe18612e74a317ab9fe3.ctex"
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2b3hl"]
 size = Vector2(58.125, 139.438)
@@ -823,6 +822,16 @@ position = Vector2(433, -209)
 
 [node name="SpawnOutside" type="Node2D" parent="." index="7"]
 position = Vector2(90, -58)
+
+[node name="Label" type="Label" parent="." index="8"]
+anchors_preset = -1
+anchor_left = 0.06
+anchor_right = 0.125
+offset_left = 42.0
+offset_top = -87.0
+offset_right = 129.0
+offset_bottom = -5.0
+text = "EXIT"
 
 [connection signal="body_entered" from="Sprites/JenniferChar/Area2D" to="Sprites/JenniferChar" method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Sprites/JenniferChar/Area2D" to="Sprites/JenniferChar" method="_on_area_2d_body_exited"]

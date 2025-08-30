@@ -18,8 +18,8 @@ script = ExtResource("1_mhnvy")
 
 [node name="Background" type="Sprite2D" parent="Sprites"]
 texture_filter = 1
-position = Vector2(610, 405)
-scale = Vector2(0.8, 0.8)
+position = Vector2(657, 917)
+scale = Vector2(2, 2)
 texture = ExtResource("2_4ytvr")
 
 [node name="Tree15" type="Sprite2D" parent="Sprites"]
@@ -38,7 +38,7 @@ scale = Vector2(0.987, 1.005)
 texture = ExtResource("3_g3eks")
 
 [node name="Tree8" type="Sprite2D" parent="Sprites"]
-position = Vector2(468, 131)
+position = Vector2(402, 251)
 scale = Vector2(0.6, 0.6)
 texture = ExtResource("3_g3eks")
 
@@ -63,27 +63,27 @@ scale = Vector2(0.8, 0.8)
 texture = ExtResource("3_g3eks")
 
 [node name="Tree10" type="Sprite2D" parent="Sprites"]
-position = Vector2(778.5, 180.5)
+position = Vector2(807, 252)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("3_g3eks")
 
 [node name="Tree11" type="Sprite2D" parent="Sprites"]
-position = Vector2(887.5, 209.5)
+position = Vector2(899, 312)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("3_g3eks")
 
 [node name="Tree12" type="Sprite2D" parent="Sprites"]
-position = Vector2(1017, 211)
+position = Vector2(786, 368)
 scale = Vector2(0.6, 0.6)
 texture = ExtResource("3_g3eks")
 
 [node name="Tree13" type="Sprite2D" parent="Sprites"]
-position = Vector2(332, 189)
+position = Vector2(318, 255)
 scale = Vector2(0.56, 0.56)
 texture = ExtResource("4_v86rl")
 
 [node name="Tree21" type="Sprite2D" parent="Sprites"]
-position = Vector2(205, 234)
+position = Vector2(296, 342)
 scale = Vector2(0.49, 0.49)
 texture = ExtResource("3_g3eks")
 
@@ -112,6 +112,7 @@ layout_mode = 2
 text = "Play"
 
 [node name="Exit" type="Button" parent="MarginContainer/VBoxContainer"]
+visible = false
 layout_mode = 2
 text = "Quit"
 

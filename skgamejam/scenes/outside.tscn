@@ -714,7 +714,6 @@ offset_right = 90.0
 offset_bottom = 212.0
 
 [node name="Stable" parent="." index="8" instance=ExtResource("4_uaw8k")]
-visible = false
 position = Vector2(-667, -903)
 scale = Vector2(1.9, 1.9)
 collision_layer = 2
